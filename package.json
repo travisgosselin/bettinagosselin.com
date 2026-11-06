@@ -1,0 +1,24 @@
+{
+  "name": "bettinagosselin.com",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Bettina Gosselin's static author website and Markdown journal.",
+  "engines": { "node": ">=22 <26" },
+  "scripts": {
+    "articles": "node scripts/build.mjs --articles",
+    "build": "node scripts/build.mjs",
+    "start": "node scripts/serve.mjs",
+    "dev": "npm run build && npm start",
+    "check": "node --test tests/*.test.mjs",
+    "test": "npm run check && npm run build && playwright test",
+    "test:browser": "playwright test",
+    "screenshots": "node scripts/screenshots.mjs",
+    "browser:install": "playwright install chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2",
+    "markdown-it": "15.0.3",
+    "yaml": "2.9.1"
+  }
+}

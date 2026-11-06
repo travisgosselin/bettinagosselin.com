@@ -1,0 +1,54 @@
+name: Attach PR screenshots
+on:
+  workflow_run:
+    workflows: ["PR checks and screenshots"]
+    types: [completed]
+permissions: {}
+concurrency:
+  group: preview-comment-${{ github.event.workflow_run.head_branch }}
+  cancel-in-progress: false
+jobs:
+  comment:
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      actions: read
+      contents: read
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Checkout trusted publishing code only
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .nvmrc
+      - name: Check artifact size before download
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PREVIEW_RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          node --input-type=module -e '
+            import { execFileSync } from "node:child_process";
+            const repo = process.env.GITHUB_REPOSITORY;
+            const id = process.env.PREVIEW_RUN_ID;
+            if (!/^\d+$/.test(id)) throw new Error("Invalid run ID");
+            const response = JSON.parse(execFileSync("gh", ["api", `repos/${repo}/actions/runs/${id}/artifacts`]));
+            const artifact = response.artifacts.find(item => item.name === `site-previews-${id}`);
+            if (!artifact || artifact.expired || artifact.size_in_bytes > 60 * 1024 * 1024) throw new Error("Invalid or oversized preview artifact");
+          '
+      - name: Download screenshot data without running PR code
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: site-previews-${{ github.event.workflow_run.id }}
+          path: screenshots/
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+      - name: Validate and attach previews
+        run: node scripts/post-previews.mjs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PREVIEW_RUN_ID: ${{ github.event.workflow_run.id }}

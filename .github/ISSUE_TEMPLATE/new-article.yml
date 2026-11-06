@@ -1,0 +1,65 @@
+name: New blog post
+description: Submit plain text or Markdown for an article draft pull request.
+title: "[Article] "
+labels: ["article:request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Paste the author's finished text below. Markdown is optional.
+        Manual intake only: issue-to-article automation is deferred.
+        Once enabled in a later phase, a maintainer will review
+        this request and apply article:ready to ask Copilot for a draft PR.
+        Submitting this form does not publish the article.
+  - type: input
+    id: article-title
+    attributes:
+      label: Article title
+      description: Exact title to display on the site.
+    validations:
+      required: true
+  - type: input
+    id: publish-date
+    attributes:
+      label: Publication date
+      description: YYYY-MM-DD, using America/Toronto. Future scheduling is not supported.
+      placeholder: "2026-11-06"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Short description
+      description: Brief metadata summary, not a replacement for the article body.
+    validations:
+      required: true
+  - type: input
+    id: slug
+    attributes:
+      label: Preferred URL slug
+      description: Optional lowercase words separated by hyphens; otherwise derive from the title.
+      placeholder: studying-habakkuk
+  - type: input
+    id: source
+    attributes:
+      label: Original post URL
+      description: Required for migrating an existing post; leave empty for new writing.
+  - type: textarea
+    id: content
+    attributes:
+      label: Article content
+      description: Paste the complete text. Preserve paragraphs, intentional line breaks, quotations, and attribution.
+    validations:
+      required: true
+  - type: textarea
+    id: formatting
+    attributes:
+      label: Formatting notes
+      description: Optional instructions for headings, italics, line breaks, or supplied images. Do not put article prose here.
+  - type: checkboxes
+    id: approval
+    attributes:
+      label: Editorial confirmation
+      options:
+        - label: This text is approved for preparing an article PR, and any third-party quotations are identified for publication review.
+          required: true
