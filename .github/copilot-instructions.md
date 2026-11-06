@@ -11,7 +11,7 @@ sunrise gold, warm ivory reading surfaces, ocean photography, and literary serif
 headings. Keep a focused homepage with a book-first hero, author introduction,
 Scripture quote, and five latest-post previews
 after the quote. Omit the redundant homepage book-summary band with unused space.
-Navigation destinations are The Book, My Story, Reflections, and Contact, at
+Navigation destinations are My Book, My Story, My Reflections, and Contact, at
 `/anchor-of-truth/`, `/story/`, `/reflections/`, and `/contact/`. Article URLs are
 `/reflections/<slug>/`. All public links/canonicals must be extension-free;
 HTML index files are an implementation detail. Keep legacy URLs as redirects,
@@ -50,6 +50,9 @@ proposed or blocked automation as implemented.
   paragraph order, quotations, and attribution. Do not replace articles with
   summaries, paraphrases, or rewritten copy. Style the original content without
   changing its wording. Homepage previews may use clearly identified excerpts.
+- All 46 published WordPress posts are migrated, with their original dates,
+  slugs, text, and images. The source inventory and independent original-text
+  fixtures in `tests/fixtures/` guard against missing or altered archive content.
 - Do not add a newsletter, contact form, analytics, tracking, or external
   service integration without approval. Never imply a form works without a
   working, approved submission destination.

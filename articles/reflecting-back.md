@@ -1,0 +1,27 @@
+---
+title: "Reflecting Back"
+date: "2015-08-29"
+slug: "reflecting-back"
+author: "Bettina Gosselin"
+description: "A couple months ago I was driving downtown in an area that is not the nicest of the city I live in. As I drove down the road and saw the construction in…"
+source_url: "https://bettinagosselin.com/reflecting-back/"
+---
+
+A couple months ago I was driving downtown in an area that is not the nicest of the city I live in. As I drove down the road and saw the construction in front of me I also noticed a woman walking down the road and it was very obvious she was someone who used her body to get money. I couldn’t help but look at this woman and see her dark sunglasses that were on her almost as if trying to hide the person underneath. She had a huge wig on and everything about her just seemed like it was this mask and not really who she was. As I got closer I realized this woman that I had been watching was once my roommate.
+
+Years ago when I left the church after being incredibly hurt I moved in with some people that were not in the healthiest place. Two of the women I shared a house with used their body to get money and I very quickly learned what their job really made them do and all that went on in that industry. It was sad but what made me even sadder was when I heard the background of these women’s life story. Both had very sad situations happen in their lives and they kinda gave up and got into things that were not good and ended up needing money and found the industry they were in an easy way to be able to pay their bills. The truth is while I lived life away from God and lived with my two friends I got to know their bosses and I too was offered a job if I wanted it. I thought about it but something about all I had learnt as a child and growing up kept me from making the decision to go that route. I am so thankful that God saved me and that even back then I made the decision to step away and not get involved in what my roommates were doing.
+
+Watching my old roommate walking down the road made me so sad! To see this woman I knew and lived with and see she was still hurting and living the life she probably never grew up wanting made my heart ache for her. On September third it will have been ten years since God opened my eyes and made me realize truth and changed my life completely. Sadly it would appear it’s been ten years that my old friend has continued to be in a horrible industry and probably has continued to experience more hurt in her life. How I wished I had realized it was her sooner and I could have stopped to talk to her. I have driven down that road many times now and every time I am there I drive very slowly looking very closely at everyone around trying to look out for her but…I haven’t found her. I really hope that one day I can run into her again and can share about God and his salvation and how He has changed my life and how He can change hers.
+
+It still amazes me where I am today. Lately the song that has really hit me is “Creation Calls” by Brian Doerksen. One line this song says in the verse is “A newborns cry at birth”; man how that hits me now. I know I was amazed by what God creates when Joziah was born but I don’t know this time with Westyn my whole birthing experience was different and just to hear my baby’s first cry, to hold that little precious baby with wrinkly skin in my arms and to stare at his little details just really hit me again in a new way. It was so amazing when the midwife examined and showed us all these little things about Westyn’s body making sure he was healthy. It made me be in awe and I still get teary eyed thinking about it.
+
+![A newborn resting with tiny hands folded together](/assets/images/articles/reflecting-back-1.jpg)
+
+That’s why this song has been on my mind lately. How could I have ever been in a place where I believed there was no God, where I believed that everything my parents told me and taught me was a lie? I was so hurt and betrayed I blamed it on God. I can remember the absolute sick feeling I felt when others would talk about God around me or would pray around me and how I would want them to just stop talking and praying to God. How blinded was I by Satan to not see that everything around me is spectacularly made by God?
+
+I have been praying for my old roommate and will continue to. I hope one day she too will experience life in a whole new way and she will know what it is like to have her eyes opened up and she’ll be able to understand what Gods love is all about. May she one day be changed and look at life differently. May she want to please God in every area of her life and may she too hear the words to this song and sing,
+
+**“How could I say there is no God?  
+ When all around creation calls!!  
+ A singing bird, a mighty tree,  
+ The vast expanse of open sea”**

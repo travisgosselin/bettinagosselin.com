@@ -1,6 +1,6 @@
 # Implementation plan
 
-**Current scope:** the owner authorized the initial site, seven migrated articles,
+**Current scope:** the owner authorized the initial site, all 46 published WordPress articles,
 compiler, local npm commands, styles, tests, workflows, and a direct push to
 `main` without an initial PR. Keep the repository private and Pages disabled.
 

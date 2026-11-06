@@ -106,14 +106,19 @@ adds intrinsic sizing/lazy loading, and applies the configured site base path.
 Remote images, SVGs, embeds, traversal paths, and images without alt text are
 rejected. Normal HTTP(S) links, `mailto:` links, and same-page anchors are supported.
 
-Seven posts have been migrated: **Studying Habakkuk**, **Thanksgiving 2024**,
-**A Beautiful Reminder**, **17 Years Ago**, **My Journey and the Power of Prayer**,
-**Reflections on Good Friday**, and **Hope Amidst Natural Disasters**.
-The homepage shows exactly the latest five, newest first; the reflections index
-lists all seven. Their text is checked against fixtures imported independently
-from the original WordPress feed. Dates use the original Toronto publication
-calendar, not the next day's UTC feed date. If intentionally editing one, review
-the source change before updating its corresponding fixture.
+**All 46 published WordPress articles are migrated**, from **Teen Mission Camp**
+(September 24, 2009) through **Studying Habakkuk** (November 17, 2025), including
+their 28 original images. The homepage shows the latest five; **My Reflections**
+lists the complete archive, newest first.
+
+The public WordPress API inventory in `tests/fixtures/wordpress-archive.json`
+records every original title, slug, publication date, source URL, and image.
+Independent original-text fixtures check both compiled prose and browser-rendered
+articles. Dates retain the original local publication day, not the next day's
+UTC feed date. Superscript ordinal suffixes are plain inline text, and the static
+Mozambique flag is converted from GIF to JPEG. Historical wording and external
+links are preserved, not silently corrected or rewritten. If intentionally
+editing an original post, review the source change before updating its fixture.
 
 Public URLs are extension-free: `/anchor-of-truth/`, `/story/`, `/reflections/`,
 `/contact/`, and `/reflections/<slug>/`. Old WordPress root article paths, `/blog/`
@@ -121,6 +126,8 @@ article paths, `/the-book.html`, and `/my-story.html` redirect to these canonica
 URLs. Those compatibility files are not used in navigation or the sitemap.
 The slugs `anchor-of-truth`, `story`, `reflections`, `contact`, and `blog` are
 reserved so an article cannot overwrite a main page or redirect.
+Navigation uses **My Book**, **My Story**, **My Reflections**, and **Contact**;
+display-label changes do not change these URLs.
 
 ## Inside the repository
 
@@ -244,4 +251,4 @@ Its design is retained in [the implementation plan](design/implementation-plan.m
 - **Scripture:** Hebrews 6:19, ESV; attribution appears in the footer.
 
 Keep the public launch review separate from development. The current WordPress
-site, older posts not yet migrated, and domain/email DNS remain untouched.
+site and domain/email DNS remain untouched.

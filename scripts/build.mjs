@@ -88,7 +88,7 @@ export async function build({ articlesOnly = false } = {}) {
     await writeFile(path.join(staging, 'articles.json'), `${JSON.stringify(manifest, null, 2)}\n`);
     await redirect('the-book.html', 'anchor-of-truth/', 'Anchor of Truth');
     await redirect('my-story.html', 'story/', 'My Story');
-    await redirect('blog/index.html', 'reflections/', 'Reflections');
+    await redirect('blog/index.html', 'reflections/', 'My Reflections');
     const routes = ['', 'anchor-of-truth/', 'story/', 'reflections/', 'contact/', ...articles.map((a) => `reflections/${a.slug}/`)];
     await writeFile(path.join(staging, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${routes.map((route) => `<url><loc>${esc(`${origin}${base}${route}`)}</loc></url>`).join('')}</urlset>\n`);
     await writeFile(path.join(staging, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${origin}${base}sitemap.xml\n`);

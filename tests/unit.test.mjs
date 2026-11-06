@@ -13,6 +13,11 @@ test('preserves wording, punctuation and hard breaks', () => {
   assert.match(article.html, /“original punctuation.”<br>/);
   assert.match(article.plainText, /And an intentional break/);
 });
+test('prose preserves inline adjacency while separating paragraphs and list items', () => {
+  const body = 'A **bold** word, *emphasized*, and 10th.\n\nNext `paragraph` with [a link](https://example.com).\n\n- First\n- Second';
+  const article = parse(valid.slice(0, valid.indexOf('\n\nA paragraph')) + `\n\n${body}\n`);
+  assert.equal(article.plainText, 'A bold word, emphasized, and 10th. Next paragraph with a link. First Second');
+});
 for (const [label, input] of [
   ['missing slug', valid.replace('slug: "a-story"\n', '')],
   ['mismatched slug', valid.replace('slug: "a-story"', 'slug: "different"')],
@@ -60,12 +65,16 @@ test('base paths are explicit and safe', () => {
 });
 test('real articles are newest first and preserve source text', async () => {
   const posts = await loadArticles('articles', '2026-11-06');
-  assert.deepEqual(posts.map((post) => post.slug), ['studying-habakkuk', 'thanksgiving-2024',
-    'a-beautiful-reminder', '17-years-ago', 'my-journey-and-the-power-of-prayer',
-    'reflections-on-good-friday', 'hope-amidst-natural-disasters']);
-  assert.equal(posts.find((post) => post.slug === '17-years-ago').date, '2021-01-11');
-  assert.equal(posts.find((post) => post.slug === 'my-journey-and-the-power-of-prayer').date, '2020-06-28');
-  for (const post of posts) {
+  const archive = JSON.parse(await readFile('tests/fixtures/wordpress-archive.json', 'utf8'));
+  assert.equal(archive.total, 46);
+  assert.equal(archive.articles.length, archive.total);
+  assert.equal(new Set(archive.articles.map((post) => post.id)).size, archive.total);
+  assert.deepEqual(posts.map((post) => post.date), posts.map((post) => post.date).sort().reverse());
+  for (const original of archive.articles) {
+    const post = posts.find((post) => post.slug === original.slug);
+    assert.ok(post, `Missing original article: ${original.slug}`);
+    for (const field of ['title', 'date', 'source_url']) assert.equal(post[field], original[field]);
+    assert.deepEqual(post.images, (original.images ?? []).map((image) => image.local_path));
     const source = await readFile(`tests/fixtures/${post.slug}.txt`, 'utf8');
     assert.equal(post.plainText, source.replace(/\s+/g, ' ').trim());
     if (post.images.length) assert.match(post.html, /width="\d+" height="\d+"/);

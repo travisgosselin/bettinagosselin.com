@@ -1,0 +1,20 @@
+---
+title: "Another Dream Comes True"
+date: "2011-01-07"
+slug: "another-dream-comes-true"
+author: "Bettina Gosselin"
+description: "Last night was such an amazing night for me. For the first time ever I was able to go to a Toronto Maple Leafs game. 🙂 Ever since I moved up to Canada and…"
+source_url: "https://bettinagosselin.com/another-dream-comes-true/"
+---
+
+Last night was such an amazing night for me. For the first time ever I was able to go to a Toronto Maple Leafs game. 🙂 Ever since I moved up to Canada and started watching hockey it has been a dream of mine to one day see them play live.
+
+For my birthday Travis surprised me and bought me tickets to go see them play on March 12th but all of a sudden this week Travis came home with a surprise. He asked me if I could drive him to work and pick him up. I was a little confused as usually this means he needs to get car service done. Then he proceeded to tell me that he needed me to do this so we could go see a Leafs game. I was so happy. Turns out someone blessed him with the tickets. They knew I liked the Leafs and so they decided to give them to Trav for us both to go out and enjoy the night.
+
+It was so neat to actually sit in the Air Canada Centre and have the Maple Leaf team right in front of us. The seats we had were really good seats so we could see the game clearly and just to see the scenery around you was cool. I remember my Great Uncle told me that it wasn’t that great to go to a Leaf game but I have to say he was wrong. It is totally different to actually be there then to see it happening on TV. The lights around you are so bright and there is so much that happens that you never see on TV. It is so fun to be a part of the crowd and watch them cheer loudly for the team they are cheering.
+
+![A couple smiling together at an ice hockey arena](/assets/images/articles/another-dream-comes-true-1.jpg)
+
+![Players on the ice during a hockey game](/assets/images/articles/another-dream-comes-true-2.jpg)
+
+It was really such a fun night for me and I am proud to say that we got to see an amazing game. The Leafs were tied with the St. Louis Blues at the end so it went into over time and then they tied again so it went into shoot outs. Finally after the crowd was going crazy and they were up on their feet yelling “Go Leafs Go” the Leafs won 6-5. What an intense game and great night. It is awesome to know another one of my dreams have come true. I feel completely blessed and thankful that we were given those tickets and now I really look forward to going to see another live hockey game on March 12th. 🙂

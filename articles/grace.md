@@ -1,0 +1,14 @@
+---
+title: "Grace"
+date: "2010-10-10"
+slug: "grace"
+author: "Bettina Gosselin"
+description: "Tomorrow is Canadian Thanksgiving and so today at church we sang “Amazing Grace” to give thanks to God for saving us. What really hit me today in the song…"
+source_url: "https://bettinagosselin.com/grace/"
+---
+
+Tomorrow is Canadian Thanksgiving and so today at church we sang “Amazing Grace” to give thanks to God for saving us. What really hit me today in the song was this line ” How precious did that grace appear the hour I first believed.”
+
+Isn’t it crazy and so true? I think of my life and think how I walked away from God for awhile and how I lived years not wanting to have anything to do with him and then as soon as I realized the truth and asked God to forgive me he forgave me instantly. God did not sit there and think. “hmm let me think can I forgive her for all she has done? Has she done too much to not be forgiven? Is there a reason I shouldn’t forgive her?” No my God died for me on the cross. He paid for my sins when he went through unimaginable pain and shed his blood on the cross. He knew before I did that I would turn from Him but….He was always there waiting for me to come back to Him. So in that moment in that “hour I first believed” he forgave me right then and there. He didn’t care what I had done in the past and in that instant I was made new. He extended that amazing grace to me and I was made white as snow.
+
+“Amazing grace how sweet the sound that saved a wretch like me I once was lost but now am found was blind but now I see. My chains are gone I’ve been set free my God, my Savior has ransomed me and like a flood His mercy reigns unending love, amazing grace”  CHRIS TOMLIN

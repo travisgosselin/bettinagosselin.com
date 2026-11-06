@@ -1,0 +1,477 @@
+{
+  "source": "https://bettinagosselin.com/wp-json/wp/v2/posts?per_page=100&page=1",
+  "fetched": "2026-11-06",
+  "total": 46,
+  "articles": [
+    {
+      "id": 433,
+      "slug": "studying-habakkuk",
+      "title": "Studying Habakkuk",
+      "date": "2025-11-17",
+      "source_url": "https://bettinagosselin.com/studying-habakkuk/"
+    },
+    {
+      "id": 427,
+      "slug": "thanksgiving-2024",
+      "title": "Thanksgiving 2024",
+      "date": "2024-10-20",
+      "source_url": "https://bettinagosselin.com/thanksgiving-2024/"
+    },
+    {
+      "id": 419,
+      "slug": "a-beautiful-reminder",
+      "title": "A Beautiful Reminder",
+      "date": "2021-07-30",
+      "source_url": "https://bettinagosselin.com/a-beautiful-reminder/",
+      "images": [
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2021/07/photo.png-1024x768.jpg",
+          "local_path": "/assets/images/articles/a-beautiful-reminder.jpg"
+        }
+      ]
+    },
+    {
+      "id": 412,
+      "slug": "17-years-ago",
+      "title": "17 Years Ago",
+      "date": "2021-01-11",
+      "source_url": "https://bettinagosselin.com/17-years-ago/",
+      "images": [
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2021/01/bettina-and-boys-1024x768.jpg",
+          "local_path": "/assets/images/articles/17-years-ago.jpg"
+        }
+      ]
+    },
+    {
+      "id": 404,
+      "slug": "my-journey-and-the-power-of-prayer",
+      "title": "My Journey and the Power of Prayer",
+      "date": "2020-06-28",
+      "source_url": "https://bettinagosselin.com/my-journey-and-the-power-of-prayer/",
+      "images": [
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2020/06/106088011_10158203846879597_2299773776708021844_n-169x300.jpg",
+          "local_path": "/assets/images/articles/my-journey-and-the-power-of-prayer.jpg"
+        }
+      ]
+    },
+    {
+      "id": 401,
+      "slug": "reflections-on-good-friday",
+      "title": "Reflections on Good Friday",
+      "date": "2020-04-10",
+      "source_url": "https://bettinagosselin.com/reflections-on-good-friday/"
+    },
+    {
+      "id": 397,
+      "slug": "hope-amidst-natural-disasters",
+      "title": "Hope Amidst Natural Disasters",
+      "date": "2017-10-09",
+      "source_url": "https://bettinagosselin.com/hope-amidst-natural-disasters/"
+    },
+    {
+      "id": 387,
+      "slug": "life-since-we-moved",
+      "title": "Life Since We Moved",
+      "date": "2017-06-06",
+      "source_url": "https://bettinagosselin.com/life-since-we-moved/",
+      "images": [
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2017/06/FullSizeRender-1024x768.jpg",
+          "local_path": "/assets/images/articles/life-since-we-moved-1.jpg"
+        },
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2017/06/IMG_1736-e1496795744721-768x1024.jpg",
+          "local_path": "/assets/images/articles/life-since-we-moved-2.jpg"
+        },
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2017/06/IMG_1709-e1496795901407-768x1024.jpg",
+          "local_path": "/assets/images/articles/life-since-we-moved-3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 380,
+      "slug": "april-10th",
+      "title": "April 10th",
+      "date": "2017-04-10",
+      "source_url": "https://bettinagosselin.com/april-10th/"
+    },
+    {
+      "id": 373,
+      "slug": "month-of-love",
+      "title": "“Month of Love”",
+      "date": "2017-02-07",
+      "source_url": "https://bettinagosselin.com/month-of-love/",
+      "images": [
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2017/02/Vasquez-Wed-167-1024x683.jpg",
+          "local_path": "/assets/images/articles/month-of-love-1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 362,
+      "slug": "a-joke-becomes-reality",
+      "title": "A Joke Becomes Reality",
+      "date": "2016-09-23",
+      "source_url": "https://bettinagosselin.com/a-joke-becomes-reality/"
+    },
+    {
+      "id": 348,
+      "slug": "recalling",
+      "title": "Recalling",
+      "date": "2016-03-01",
+      "source_url": "https://bettinagosselin.com/recalling/",
+      "images": [
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2016/02/DSCN4276-1024x768.jpg",
+          "local_path": "/assets/images/articles/recalling-1.jpg"
+        },
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2016/02/IMG_0538-1024x768.jpg",
+          "local_path": "/assets/images/articles/recalling-2.jpg"
+        },
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2016/02/IMG_0710-1024x768.jpg",
+          "local_path": "/assets/images/articles/recalling-3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 326,
+      "slug": "reflecting-back",
+      "title": "Reflecting Back",
+      "date": "2015-08-29",
+      "source_url": "https://bettinagosselin.com/reflecting-back/",
+      "images": [
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2015/08/Westyn_Media_03-1024x682.jpg",
+          "local_path": "/assets/images/articles/reflecting-back-1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 323,
+      "slug": "life-in-my-belly",
+      "title": "Life In My Belly",
+      "date": "2015-02-23",
+      "source_url": "https://bettinagosselin.com/life-in-my-belly/"
+    },
+    {
+      "id": 317,
+      "slug": "endometriosis-and-adnemyosis",
+      "title": "Endometriosis and Adenomyosis",
+      "date": "2015-02-11",
+      "source_url": "https://bettinagosselin.com/endometriosis-and-adnemyosis/"
+    },
+    {
+      "id": 303,
+      "slug": "life-since-joziah",
+      "title": "Life Since Joziah",
+      "date": "2014-01-21",
+      "source_url": "https://bettinagosselin.com/life-since-joziah/",
+      "images": [
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2014/01/IMG_4974-2.jpg",
+          "local_path": "/assets/images/articles/life-since-joziah-1.jpg"
+        },
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2014/01/photo-1024x1024.jpg",
+          "local_path": "/assets/images/articles/life-since-joziah-2.jpg"
+        },
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2014/01/Vasquez-Family-86-681x1024.jpg",
+          "local_path": "/assets/images/articles/life-since-joziah-3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 293,
+      "slug": "our-little-baby-boy",
+      "title": "Our Little Baby Boy",
+      "date": "2012-11-20",
+      "source_url": "https://bettinagosselin.com/our-little-baby-boy/",
+      "images": [
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2012/11/Joziah-Newsletter.jpg",
+          "local_path": "/assets/images/articles/our-little-baby-boy-1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 282,
+      "slug": "summer-2012-and-the-next-chapter-of-my-life",
+      "title": "Summer 2012 and the Next Chapter of My Life",
+      "date": "2012-09-06",
+      "source_url": "https://bettinagosselin.com/summer-2012-and-the-next-chapter-of-my-life/",
+      "images": [
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2012/09/photo-of-Kiara.jpg",
+          "local_path": "/assets/images/articles/summer-2012-and-the-next-chapter-of-my-life-1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 274,
+      "slug": "missionfest-2012",
+      "title": "MissionFest 2012",
+      "date": "2012-05-31",
+      "source_url": "https://bettinagosselin.com/missionfest-2012/"
+    },
+    {
+      "id": 260,
+      "slug": "a-new-life",
+      "title": "A New Life",
+      "date": "2012-04-03",
+      "source_url": "https://bettinagosselin.com/a-new-life/"
+    },
+    {
+      "id": 258,
+      "slug": "starting-2012-2",
+      "title": "Starting 2012…",
+      "date": "2012-02-04",
+      "source_url": "https://bettinagosselin.com/starting-2012-2/",
+      "images": [
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2012/02/image1.jpeg",
+          "local_path": "/assets/images/articles/starting-2012-2-1.jpg"
+        },
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2012/02/image2.jpeg",
+          "local_path": "/assets/images/articles/starting-2012-2-2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 235,
+      "slug": "one-more-thing-to-be-thankful-for",
+      "title": "One More Thing To Be Thankful For",
+      "date": "2012-01-30",
+      "source_url": "https://bettinagosselin.com/one-more-thing-to-be-thankful-for/"
+    },
+    {
+      "id": 226,
+      "slug": "i-e-girl-conference-update",
+      "title": "I.E Girl Conference Update",
+      "date": "2011-11-16",
+      "source_url": "https://bettinagosselin.com/i-e-girl-conference-update/"
+    },
+    {
+      "id": 171,
+      "slug": "my-friend-tracy-and-how-speaking-at-urban-promise-came-about",
+      "title": "My Friend Tracy And How Speaking At Urban Promise Came About",
+      "date": "2011-08-31",
+      "source_url": "https://bettinagosselin.com/my-friend-tracy-and-how-speaking-at-urban-promise-came-about/",
+      "images": [
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2011/08/Tracy-and-I.jpg",
+          "local_path": "/assets/images/articles/my-friend-tracy-and-how-speaking-at-urban-promise-came-about-1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 160,
+      "slug": "our-1st-anniversary",
+      "title": "Our 1st Anniversary!",
+      "date": "2011-07-18",
+      "source_url": "https://bettinagosselin.com/our-1st-anniversary/",
+      "images": [
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2011/07/Vasquez-Wed-229-150x150.jpg",
+          "local_path": "/assets/images/articles/our-1st-anniversary-1.jpg"
+        },
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2011/07/DSCN15892-1024x768.jpg",
+          "local_path": "/assets/images/articles/our-1st-anniversary-2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 155,
+      "slug": "my-life-the-last-couple-of-months",
+      "title": "My Life The Last Couple Of Months",
+      "date": "2011-06-30",
+      "source_url": "https://bettinagosselin.com/my-life-the-last-couple-of-months/"
+    },
+    {
+      "id": 138,
+      "slug": "exciting-news",
+      "title": "Exciting News",
+      "date": "2011-04-29",
+      "source_url": "https://bettinagosselin.com/exciting-news/"
+    },
+    {
+      "id": 128,
+      "slug": "merge-conference-and-more-updates",
+      "title": "Merge Conference and More Updates",
+      "date": "2011-03-31",
+      "source_url": "https://bettinagosselin.com/merge-conference-and-more-updates/"
+    },
+    {
+      "id": 123,
+      "slug": "you-give-and-take-away-my-heart-will-choose-to-say-lord-blessed-be-your-name",
+      "title": "“You Give and Take Away My Heart Will Choose to Say Lord, Blessed Be Your Name”",
+      "date": "2011-02-23",
+      "source_url": "https://bettinagosselin.com/you-give-and-take-away-my-heart-will-choose-to-say-lord-blessed-be-your-name/"
+    },
+    {
+      "id": 119,
+      "slug": "another-dream-comes-true",
+      "title": "Another Dream Comes True",
+      "date": "2011-01-07",
+      "source_url": "https://bettinagosselin.com/another-dream-comes-true/",
+      "images": [
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2011/01/IMG_5378-300x225.jpg",
+          "local_path": "/assets/images/articles/another-dream-comes-true-1.jpg"
+        },
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2011/01/IMG_5375-300x225.jpg",
+          "local_path": "/assets/images/articles/another-dream-comes-true-2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "slug": "merry-christmas",
+      "title": "MERRY CHRISTMAS!!!",
+      "date": "2010-12-15",
+      "source_url": "https://bettinagosselin.com/merry-christmas/"
+    },
+    {
+      "id": 100,
+      "slug": "prayers-are-being-answered",
+      "title": "Prayers are being answered :)",
+      "date": "2010-11-25",
+      "source_url": "https://bettinagosselin.com/prayers-are-being-answered/"
+    },
+    {
+      "id": 98,
+      "slug": "doors-open-and-doors-close",
+      "title": "Doors Open and Doors Close",
+      "date": "2010-10-16",
+      "source_url": "https://bettinagosselin.com/doors-open-and-doors-close/"
+    },
+    {
+      "id": 91,
+      "slug": "grace",
+      "title": "Grace",
+      "date": "2010-10-10",
+      "source_url": "https://bettinagosselin.com/grace/"
+    },
+    {
+      "id": 86,
+      "slug": "casting-crowns-concert-2010",
+      "title": "Casting Crowns Concert 2010",
+      "date": "2010-09-01",
+      "source_url": "https://bettinagosselin.com/casting-crowns-concert-2010/"
+    },
+    {
+      "id": 83,
+      "slug": "im-married",
+      "title": "I’m Married!!",
+      "date": "2010-08-27",
+      "source_url": "https://bettinagosselin.com/im-married/",
+      "images": [
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2010/08/1-150x150.jpg",
+          "local_path": "/assets/images/articles/im-married-1.jpg"
+        },
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2010/08/31.jpg",
+          "local_path": "/assets/images/articles/im-married-2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "slug": "the-blessings-continue",
+      "title": "The Blessings Continue",
+      "date": "2010-06-10",
+      "source_url": "https://bettinagosselin.com/the-blessings-continue/"
+    },
+    {
+      "id": 74,
+      "slug": "love-is-a-beautiful-thing-that-brings-together-people",
+      "title": "“Love Is A Beautiful Thing That Brings Together People”",
+      "date": "2010-05-28",
+      "source_url": "https://bettinagosselin.com/love-is-a-beautiful-thing-that-brings-together-people/"
+    },
+    {
+      "id": 69,
+      "slug": "ive-seen-miracles-just-happen",
+      "title": "“I’ve Seen Miracles Just Happen”",
+      "date": "2010-05-10",
+      "source_url": "https://bettinagosselin.com/ive-seen-miracles-just-happen/"
+    },
+    {
+      "id": 65,
+      "slug": "what-the-cross-means-to-me",
+      "title": "What The Cross Means To Me",
+      "date": "2010-04-13",
+      "source_url": "https://bettinagosselin.com/what-the-cross-means-to-me/"
+    },
+    {
+      "id": 62,
+      "slug": "scary-incident",
+      "title": "Scary Incident",
+      "date": "2010-01-19",
+      "source_url": "https://bettinagosselin.com/scary-incident/"
+    },
+    {
+      "id": 46,
+      "slug": "advancing-churches-in-missions-commitment-conference",
+      "title": "Advancing Churches in Missions Commitment Conference",
+      "date": "2009-11-10",
+      "source_url": "https://bettinagosselin.com/advancing-churches-in-missions-commitment-conference/",
+      "images": [
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2009/11/mozambique-flag.gif",
+          "local_path": "/assets/images/articles/advancing-churches-in-missions-commitment-conference-1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "slug": "rainbows-in-the-sky",
+      "title": "Rainbows in the Sky",
+      "date": "2009-10-29",
+      "source_url": "https://bettinagosselin.com/rainbows-in-the-sky/"
+    },
+    {
+      "id": 25,
+      "slug": "ticket-to-boston",
+      "title": "Ticket to Boston",
+      "date": "2009-09-28",
+      "source_url": "https://bettinagosselin.com/ticket-to-boston/"
+    },
+    {
+      "id": 27,
+      "slug": "im-engaged",
+      "title": "I’m Engaged",
+      "date": "2009-09-25",
+      "source_url": "https://bettinagosselin.com/im-engaged/",
+      "images": [
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2009/09/cn-tower.jpg",
+          "local_path": "/assets/images/articles/im-engaged-1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "slug": "teen-mission-camp",
+      "title": "Teen Mission Camp",
+      "date": "2009-09-24",
+      "source_url": "https://bettinagosselin.com/teen-mission-camp/",
+      "images": [
+        {
+          "source_url": "https://bettinagosselin.com/wp-content/uploads/2009/09/IMG_1800-300x225.jpg",
+          "local_path": "/assets/images/articles/teen-mission-camp-1.jpg"
+        }
+      ]
+    }
+  ]
+}

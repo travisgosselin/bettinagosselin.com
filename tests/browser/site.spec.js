@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
 
 const articles = JSON.parse(await readFile('dist/articles.json', 'utf8'));
+const archive = JSON.parse(await readFile('tests/fixtures/wordpress-archive.json', 'utf8'));
 const pages = ['/', '/anchor-of-truth/', '/story/', '/reflections/', '/contact/',
   ...articles.map((article) => `/${article.route}`)];
 const normalize = (text) => text.replace(/\s+/g, ' ').trim();
@@ -17,7 +18,7 @@ for (const route of pages) {
     await expect(page.locator('h1')).toHaveCount(1);
     await expect(page.locator('main')).toBeVisible();
     await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-    await expect(page.locator('header nav a')).toHaveText(['The Book', 'My Story', 'Reflections', 'Contact']);
+    await expect(page.locator('header nav a')).toHaveText(['My Book', 'My Story', 'My Reflections', 'Contact']);
     const links = await page.locator('a[href], link[rel="canonical"], meta[property="og:url"]').evaluateAll((nodes) =>
       nodes.map((node) => node.href || node.content));
     expect(links.every((url) => !new URL(url).pathname.endsWith('.html'))).toBe(true);
@@ -30,13 +31,18 @@ for (const route of pages) {
     expect(requests.every((url) => new URL(url).hostname === '127.0.0.1')).toBe(true);
   });
 }
-for (const { slug } of articles) {
+for (const { slug } of archive.articles) {
   test(`${slug} renders the complete unchanged original text`, async ({ page }) => {
     await page.goto(`/reflections/${slug}/`);
     const original = await readFile(`tests/fixtures/${slug}.txt`, 'utf8');
     expect(normalize(await page.locator('.article-body').innerText())).toBe(normalize(original));
   });
 }
+test('reflections index lists every published article in publication order', async ({ page }) => {
+  await page.goto('/reflections/');
+  await expect(page.locator('.blog-list .post-card')).toHaveCount(articles.length);
+  await expect(page.locator('.blog-list h2')).toHaveText(articles.map((article) => article.title));
+});
 test('local links and images resolve', async ({ page, request }) => {
   const urls = new Set();
   for (const route of pages) {
@@ -54,7 +60,7 @@ test('skip link and main navigation work without JavaScript', async ({ browser }
   await page.goto('http://127.0.0.1:4322');
   await page.keyboard.press('Tab');
   await expect(page.getByRole('link', { name: 'Skip to content' })).toBeFocused();
-  await page.locator('header nav').getByRole('link', { name: 'Reflections' }).click();
+  await page.locator('header nav').getByRole('link', { name: 'My Reflections' }).click();
   await expect(page).toHaveURL(/\/reflections\/$/);
   await page.getByRole('heading', { name: 'Studying Habakkuk' }).getByRole('link').click();
   await expect(page.locator('h1')).toHaveText('Studying Habakkuk');

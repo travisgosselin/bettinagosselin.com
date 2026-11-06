@@ -1,0 +1,22 @@
+---
+title: "I.E Girl Conference Update"
+date: "2011-11-16"
+slug: "i-e-girl-conference-update"
+author: "Bettina Gosselin"
+description: "“There is rejoicing in the presence of the angels of God over one sinner who repents.” Luke 15:10 What an amazing weekend!!! The most exciting news that I…"
+source_url: "https://bettinagosselin.com/i-e-girl-conference-update/"
+---
+
+“There is rejoicing in the presence of the angels of God over one sinner who repents.” Luke 15:10
+
+What an amazing weekend!!! The most exciting news that I have to share with you all is that this past weekend there were angels rejoicing in heaven as at the end of the ie girl weekend several girls gave their lives to Christ and made a commitment to follow Him. 😀
+
+The whole conference was phenomenal. First off I have to say that the key leader Michelle and the rest of the ie team are all incredible people who have such a love and passion for God and for every girl who walked through the doors this weekend. They made everyone feel so comfortable and they did a great job at planning the schedule for this event where moms and mentors could connect with each other.
+
+There were such special moments I got to witness this weekend like the girls sharing with their moms or mentors what their favourite memory with them was. I got to see moms and daughters hug each other and tell each other how much they loved them, got to hear their voices singing “In Christ Alone” and the most special moment for me happened at the end of the conference when I got to see mothers with tears in their eyes speak verses over their daughters and the daughters do the same over their moms. What an amazing and significant thing to see. It brought tears to my eyes.
+
+Thank you to all who were praying for me and all who sent me encouraging notes before I spoke this weekend. I really appreciate it!!! I started to get sick with a cold and sore throat right before the conference, but God is good and He made me strong when my body was getting weak and He carried me through each time I had to speak. I am also so happy and excited to let you know that this weekend I did not have the same fear I have had in the past when I have gotten up to speak. Yes, I was still nervous but there was no intense fear. I have shared with some people that in the past when it was the day before or even the hour before I had to speak I would think in my mind, “this would be a great time for God to come back”. Not that I don’t look forward to my future, but because I really couldn’t see my self getting up in front of people. However, this time it was totally different. This weekend I spoke on Fighting Fear, Overcoming Obstacles and Finding Hope in Christ. It was interesting how they asked me to speak on Fighting Fear when I had a fear of public speaking, but it is neat how God works. In preparing my message I was able to learn so much too and apply it to my own life. I knew when I got up there to speak to everyone that God was with me and He would be the one to lead me in my speaking. I trusted him to help me do what He had asked me to do.
+
+I am so thankful that I was asked to be a part of this conference and that I got to witness all the amazing things that happened through it. There are too many to share in a letter, but as I said before it was awesome. One girl I connected with shared with me yesterday that after this weekend she feels alive, she realizes she has a purpose here, she is reading the Bible more and that others are seeing a difference in her. Praise God!!! Please pray for all the girls who attended this event. Pray that they would continue to be strong and courageous in the Lord. Pray that they would be a light to others around them and that they would continue to grow in a deep relationship with their precious Saviour.
+
+Thanks to all who were praying!!

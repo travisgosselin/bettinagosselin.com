@@ -86,11 +86,12 @@ export function parseArticle(source, filename, today = todayToronto(), base = '/
       }
       if (token.type === 'text' || token.type === 'code_inline') prose.push(token.content);
       if (token.type === 'softbreak' || token.type === 'hardbreak') prose.push(' ');
+      if (token.type === 'inline') prose.push(' ');
       if (token.children) inspect(token.children);
     }
   }
   inspect(tokens);
-  const plainText = prose.join(' ').replace(/\s+/g, ' ').trim();
+  const plainText = prose.join('').replace(/\s+/g, ' ').trim();
   const firstParagraph = tokens.find((token) => token.type === 'inline' &&
     token.children?.some((child) => ['text', 'code_inline'].includes(child.type) && child.content.trim()))?.children ?? [];
   const excerpt = firstParagraph.filter((token) => token.type !== 'image')

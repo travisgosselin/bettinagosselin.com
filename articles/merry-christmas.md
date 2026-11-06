@@ -1,0 +1,20 @@
+---
+title: "MERRY CHRISTMAS!!!"
+date: "2010-12-15"
+slug: "merry-christmas"
+author: "Bettina Gosselin"
+description: "This December Nexus had their 4th annual Winter Warmup. There were so many yummy treats there like gingerbread man cookies, muffins, and haystacks for the…"
+source_url: "https://bettinagosselin.com/merry-christmas/"
+---
+
+This December Nexus had their 4th annual Winter Warmup. There were so many yummy treats there like gingerbread man cookies, muffins, and haystacks for the young adults that attended. We had a couple of games and made the first part of the evening a time where young adults could come together, talk and get to know each other. We had a fabulous live music in the background playing as people enjoyed their warm apple cider and hot chocolate.
+
+A couple of months ago Travis and I had a girl named Brooke come to us and share how she was interested in being a worship leader for a young adult band with Nexus. She was an answer to prayer as Travis and I had been praying for this. Brooke is an amazing girl and the huge thing is we know her heart. We know that Brooke loves God and wants to follow him. She is a sweet girl who many love and respect. Now Brooke has put together a band and they played at the coffee house for the first time. They did such an amazing job and Travis and I were so pleased. We saw young adults engaging God and it was just a great time of worship. After we had Craig Luff the youth pastor from our church share a word with all who were there. He spoke a very powerful and challenging message.  We have heard great feedback about his message and know it has made people think about their lives and what they are doing with it. All in all the night was a success and around 75 people showed up for it. Thank you for praying for us as we organized this event!
+
+Tomorrow is supposed to be our last study of the year but we don’t really know if we will actually have it because it has been crazy weather here in Canada. The snow just does not keep stopping. Though it looks beautiful on the ground sometimes it is not the greatest to drive in so we shall see what happens. Weather permitting tomorrow we will be concluding our book called “Crazy Love”. It has been a great book. Though as a group we would say we don’t agree with everything it has made us think. I have personally been challenged once again on loving like Jesus loves. Lately I have been faced with many situations were I am put right in front of someone who has hurt me yet through reading this book I have learned to just smile and try to act towards them as if they never hurt me. Sure you need boundaries still but there is a difference between being civil with someone or just totally avoiding them when you have mutual friends and are invited out together. I just want to be more like Jesus. I may not understand everything but I need to remember to be the better person because I know that is what God requires from me.
+
+Well….I am sure you are all getting ready for one of the biggest days of the year. I have enjoyed blasting my Christmas music and seeing Travis give me this cute little frown as he realizes how I do actually love listening to Celine Dion Christmas music and even “The Gaither Band” Christmas CD. I have enjoyed our first winter as husband and wife decorating our home, buying Christmas gifts for our family and wrapping them together. Now I look forward to going up to Powassan with Travis and celebrating Jesus birth. I love that I am married into a family were they love Jesus as much as me and that we can all celebrate our Saviour coming into this world.
+
+**“It’s sharing your gifts, not purchasing gifts;It’s not wrapping presents, its being presentand wrapping your arms around the ones you love;It’s not getting Christmas cards out on time,It’s sending any card, anytime, at the right time;It’s not having the biggest and best Christmas light display,It’s displaying the Christ light that comes from your heart;It’s not Santa coming down the chimney,It’s Jesus coming down from heaven,and giving us the gift of eternal life.”**
+
+May you all have a Merry Christmas!!!

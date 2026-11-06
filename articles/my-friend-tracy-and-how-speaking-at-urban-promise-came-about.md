@@ -1,0 +1,30 @@
+---
+title: "My Friend Tracy And How Speaking At Urban Promise Came About"
+date: "2011-08-31"
+slug: "my-friend-tracy-and-how-speaking-at-urban-promise-came-about"
+author: "Bettina Gosselin"
+description: "Tracy Robinson has known me since I was a tiny baby in my mother’s arms. I grew up knowing who Tracy was but it wasn’t until I was in my twenties that Tracy…"
+source_url: "https://bettinagosselin.com/my-friend-tracy-and-how-speaking-at-urban-promise-came-about/"
+---
+
+Tracy Robinson has known me since I was a tiny baby in my mother’s arms. I grew up knowing who Tracy was but it wasn’t until I was in my twenties that Tracy and I developed a friendship of our own that became very strong. I remember the day we reconnected down by the water front and ended up talking to each other for hours. Since then our friendship has grown so much. She has not only become a close friend who I can share everything with but a mentor as well. We have gotten together many times and talked about what is going on in our lives and she has helped me through different situations I have faced. She has been an amazing blessing in my life and I am thankful that God placed her in my life!
+
+![Tracy and I](/assets/images/articles/my-friend-tracy-and-how-speaking-at-urban-promise-came-about-1.jpg)
+
+Three years ago this month Tracy’s husband Scott had a brain aneurism and Jesus took him home. Scott was a wonderful man. He was known for being genuine and for loving his family the way a husband and father should and many people respected him for that.
+
+Tracy and I have had many times where we have gotten together and talked about Scott and the wonderful memories and marriage they had. In fact I owe a huge thanks to Tracy for making me understand more of what real love is and for teaching me how to love Travis the way I should. It was through her that I learnt to really appreciate and not take things for granted with Travis. There also have been times that Tracy and I have talked about Scott’s death and life since he has been gone. Tracy hasn’t always understood what God has planned for her life and a year ago she didn’t know where she would be but her Saviour did. He knew that He was not done with her and would use her in a huge way.
+
+At the beginning of this year Tracy came to Travis and I and confided in us that she had applied to Urban Promise in Toronto to be a site supervisor for the youth program. When Tracy came and shared this with us I was not surprised. I had felt for awhile like God would call her away from Barrie but I didn’t know where or when it was going to happen. I could see Tracy’s face light up as she talked to us about the position and what she would be doing if she got accepted. Trav and I said we would pray for her but as soon as she left we both looked at each other and said, “She has the job.” It was so obvious to us that she would be making the move and going and working in Toronto.
+
+Travis and I were right and it has now been four months since Tracy has been working for Urban Promise and helping out with the youth down in the city. One of the things Tracy has been in charge of is putting lessons together for the students that attend summer day camp. When she was putting together the lesson on Jesus being truth she said I came to mind and knew I had to be the one to go down and share my testimony and share how Jesus has been truth in my life.
+
+I went down on July 21st and it was so neat to be able to see first hand the ministry of UP. I felt welcome right away when I walked into the room and a girl that was in the youth program came up to me and said, “What are you here for?” I said, “I am going to be speaking.” And she replied, “Then I will be listening.” 🙂
+
+God gave me strength as I spoke and the next thing I knew I was done sharing. I was told after by two leaders that they couldn’t believe how quiet and still the kids were. Tracy shared with me after that the kids looked like they were on the edges of their seats waiting to hear what I was going to say next.
+
+After I spoke I got to talk to some of the kids. One boy came up to me right away and asked me some questions and then after awhile he said, “But is your story true?” It made me laugh. I also had one of the leaders share with me that he was excited for the discussion that was going to come up in their small groups because of what I had shared.
+
+From the things I heard and from what the kids shared with me I know that God used my story and what I shared to speak truth into the lives of the kids at Urban Promise. I was just sharing with some one the other day how sometimes my testimony becomes boring to me because it feels repetitive but it is always great to remember it is Jesus story not mine and that He can use it to reach others in whatever way He wants to reach them. I am so very thankful to Tracy for thinking of me and giving me this opportunity to go down and share my truth in Jesus with kids who needed to hear it.
+
+Thank you all for praying for me as I went down to the city. Your prayers were so appreciated!!

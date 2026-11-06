@@ -1,0 +1,30 @@
+---
+title: "The Blessings Continue"
+date: "2010-06-10"
+slug: "the-blessings-continue"
+author: "Bettina Gosselin"
+description: "Travis right now lives in a really cute one bedroom apartment. It has a kitchen, bathroom and everything you would need in a place, but the apartment is…"
+source_url: "https://bettinagosselin.com/the-blessings-continue/"
+---
+
+Travis right now lives in a really cute one bedroom apartment. It has a kitchen, bathroom and everything you would need in a place, but the apartment is just a little too small for two people to live in.
+
+Our friends have been living in a beautiful two bedroom apartment for over 10 years. This has been a place that I have gone and stayed at when they needed someone to house and dog sit for them. It has also been a place where I found safety when I went through a really hard time of my life.  Not only that, but my Great Grandpa and after he passed away, my Great Uncle lived behind this place and so it is a neighborhood I know really well.
+
+This year our friends found a house that they fell in love with and so they decided to buy it. They knew that we were looking around for a bigger place and they knew it would be nice for us to have more room, so they told us to contact the landlord and let him know that we were interested.  We did contact the landlord and sat down with him a couple times and discussed things.
+
+In the end it turned out the landlord liked us and trusted us and offered us the place. Of course it helped that our friends highly recommended us.  The landlord gave us an amazing deal that we know we would not get anywhere else and he has been so flexible at understanding our situation of having to wait till Travis’ lease is over.
+
+The two things we knew we would have to get if we moved there were a washer and a dryer because the place did not come with them. We knew we would have to get stackable ones too because that is all that would fit in the laundry room in the new apartment. Travis looked at some in Sears and priced them. We knew it would be expensive, but we also knew it was something we had to get right away.
+
+Then the new landlord called and shared with us that he knew a couple that were renovating their place and were getting rid of their stackable washer and dryer. They were looking to give them away to someone to bless them and heard about us and wanted to know if we wanted them.
+
+We went and looked at them and realized they were still in good shape, so we decided to take them. We were shocked! We couldn’t believe they did not want any money when the washer and dryer were still in good shape. We knew we were being blessed.
+
+It is so awesome how good God has been to Travis and I! Not only is this place going to be perfect for us, but it is nice and open and so we will be able to have people over. We have thought about maybe holding a study there instead of at the church we go too, but we shall see what God has planned. The sweet thing is if we want to do that we do have lots of room to have that option. As I said before God is good!!!
+
+Though this letter is not about what has been going on in my ministry I wanted to share this with you and show you all how God has been blessing Travis and I. The blessings have been incredible and I know that so much more is in store.
+
+I’ll leave you all with a verse that I believe reflects what has been happening in my life lately. It comes from The Message Bible.
+
+**“Meanwhile, the moment we get tired in the waiting, God’s Spirit is right alongside helping us along. If we don’t know how or what to pray, it doesn’t matter. He does our praying in and for us, making prayer out of our wordless sighs, our aching groans. He knows us far better than we know ourselves, knows our pregnant condition, and keeps us present before God. That’s why we can be so sure that every detail in our lives of love for God is worked into something good.” Romans 8:26-28**

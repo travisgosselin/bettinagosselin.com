@@ -19,7 +19,7 @@ the initial implementation and direct push to `main`, without a PR.
 - Homepage order: ocean/book hero, author introduction, Scripture quote,
   previews of the latest five reflections, footer. Remove the redundant book-summary band and its
   unused space.
-- Navigation: The Book, My Story, Reflections, Contact. The wordmark links home. Scripture stays
+- Navigation: My Book, My Story, My Reflections, Contact. The wordmark links home. Scripture stays
   in page content, not a separate navigation destination.
 - Public routes: `/anchor-of-truth/`, `/story/`, `/reflections/`, `/contact/`,
   and `/reflections/<slug>/`. Never expose `.html` in links or canonical URLs.
@@ -101,9 +101,13 @@ the initial implementation and direct push to `main`, without a PR.
   required for migrations.
 - Date-only publication uses `America/Toronto`. Future dates are rejected for
   now: scheduled posts need a scheduled rebuild and are outside this first pass.
-- Seven original posts are migrated, with independent original-text fixtures.
-  Their original photographs are local, reviewed JPEG assets with alt text,
-  intrinsic dimensions, and base-path-aware URLs; no remote image requests.
+- All 46 published WordPress posts, September 2009 through November 2025, are
+  migrated. The public WordPress API reports 46 posts in one page; retain the
+  source inventory and independent original-text fixtures in `tests/fixtures/`.
+  Preserve original slugs, titles, local publication dates, and external links.
+  Their 28 original images are local JPEG assets with alt text, intrinsic
+  dimensions, and base-path-aware URLs; the static Mozambique flag was converted
+  from GIF to JPEG. No remote image requests. The homepage still shows five posts.
 - For future issue automation, label `article:request` identifies form submissions.
   Only maintainers apply
   `article:ready`; that second label authorizes an agent run. Re-labeling must

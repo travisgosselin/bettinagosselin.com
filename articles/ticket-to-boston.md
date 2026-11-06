@@ -1,0 +1,12 @@
+---
+title: "Ticket to Boston"
+date: "2009-09-28"
+slug: "ticket-to-boston"
+author: "Bettina Gosselin"
+description: "A couple of months ago I asked my sister to look into leadership conferences in the states. I knew great ones were held there and I was interested in going…"
+source_url: "https://bettinagosselin.com/ticket-to-boston/"
+---
+
+A couple of months ago I asked my sister to look into leadership conferences in the states. I knew great ones were held there and I was interested in going to one where I would learn more to help my ministry. I wasn’t sure how it would be possible for me to attend one but I prayed to God that the doors would open up.
+
+Then all of a sudden a couple of weeks ago I got an email from Barb and Bill asking me if I was interested in going to Boston to a missions conference. They said if I went they would pay for all my expenses. I could not believe it and told them right away I was very interested. So now my ticket has been booked to fly down from November 6th to 8th. I am so extremely excited and it is for sure an answer to prayer. I know this conference is going to teach me so much and it is going to be great!

@@ -1,0 +1,16 @@
+---
+title: "MissionFest 2012"
+date: "2012-05-31"
+slug: "missionfest-2012"
+author: "Bettina Gosselin"
+description: "Last month I had the honour of speaking in Toronto at MissionFest 2012. The theme of the session I spoke at was “Ordinary women – Extraordinary call”. I was…"
+source_url: "https://bettinagosselin.com/missionfest-2012/"
+---
+
+Last month I had the honour of speaking in Toronto at MissionFest 2012. The theme of the session I spoke at was “Ordinary women – Extraordinary call”. I was asked to share my testimony, how I got involved with “Into All the World” and what I do now with this organization. It was so neat to see God work even before I got up to speak.  I had the privilege of meeting and sharing the session with Susan Finlay, the Founder and National Director of Nation at Prayer. She is such a sweet lady and it was so neat to see how we were on the same page when it came to how we would end the session together. It was also neat to see how God planned for everything to come together. Susan and I had never shared with the worship band what we were going to say when we spoke and yet the words the worship band sang related to what I shared in my message and what Susan shared in hers.
+
+God has definitely worked on my fear of speaking and I had peace when I went up on stage. After the session was over I had many moms and ladies come up to talk to me. It was amazing to have moms share with me what was going on with their daughters and yet it made me sad because I realized how many girls are hurting and how many girls Satan is lying to making them feel worthless. It was hard to hear some of the stories and it is sad to see moms in so much pain, feeling helpless. As some of the moms shared their stories with me I realized that God had me share what I shared for a reason. I love how He does that! One lady who came to talk to me shared how she wanted to do mission work, but really felt like she had done so much in her past that she wasn’t worthy of going on a mission trip. She came to me with tears in her eyes and shared with me how what I shared made her realize that this was a lie and that she was worthy and she was going to go on a mission trip and try to help others. Those kinds of stories bring a smile to my face because I am glad that God can use my story to make others fulfill the call He has placed on their lives.
+
+I have continued to be in touch with some of the ladies who came to speak with me after the session. Speaking at MissionFest connected me to girls that needed help and I continue to receive emails from moms who heard about me and want me to help their daughters.
+
+I am so thankful for my time at MissionFest! Thankful for the people that I got to meet and thankful that God used me and continues to use me to reach out to others. Wisdom is one of the things I need as I continue to meet with girls and deal with some very tough situations that they are facing. This past month has been a month where I have had to intervene in some of these situations so please pray for continued wisdom for me.  Also please continue to pray for the girls I meet with and that they would be freed from their distorted thinking.
