@@ -1,8 +1,9 @@
 import { test, expect } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
 
-const pages = ['/', '/the-book.html', '/my-story.html', '/blog/',
-  '/blog/studying-habakkuk/', '/blog/thanksgiving-2024/'];
+const articles = JSON.parse(await readFile('dist/articles.json', 'utf8'));
+const pages = ['/', '/anchor-of-truth/', '/story/', '/reflections/', '/contact/',
+  ...articles.map((article) => `/${article.route}`)];
 const normalize = (text) => text.replace(/\s+/g, ' ').trim();
 
 for (const route of pages) {
@@ -16,6 +17,10 @@ for (const route of pages) {
     await expect(page.locator('h1')).toHaveCount(1);
     await expect(page.locator('main')).toBeVisible();
     await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+    await expect(page.locator('header nav a')).toHaveText(['The Book', 'My Story', 'Reflections', 'Contact']);
+    const links = await page.locator('a[href], link[rel="canonical"], meta[property="og:url"]').evaluateAll((nodes) =>
+      nodes.map((node) => node.href || node.content));
+    expect(links.every((url) => !new URL(url).pathname.endsWith('.html'))).toBe(true);
     expect(await page.title()).not.toBe('');
     await page.evaluate(async () => {
       for (const image of document.images) { image.loading = 'eager'; await image.decode(); }
@@ -25,9 +30,9 @@ for (const route of pages) {
     expect(requests.every((url) => new URL(url).hostname === '127.0.0.1')).toBe(true);
   });
 }
-for (const slug of ['studying-habakkuk', 'thanksgiving-2024']) {
+for (const { slug } of articles) {
   test(`${slug} renders the complete unchanged original text`, async ({ page }) => {
-    await page.goto(`/blog/${slug}/`);
+    await page.goto(`/reflections/${slug}/`);
     const original = await readFile(`tests/fixtures/${slug}.txt`, 'utf8');
     expect(normalize(await page.locator('.article-body').innerText())).toBe(normalize(original));
   });
@@ -49,8 +54,8 @@ test('skip link and main navigation work without JavaScript', async ({ browser }
   await page.goto('http://127.0.0.1:4322');
   await page.keyboard.press('Tab');
   await expect(page.getByRole('link', { name: 'Skip to content' })).toBeFocused();
-  await page.locator('header nav').getByRole('link', { name: 'Blog' }).click();
-  await expect(page).toHaveURL(/\/blog\/$/);
+  await page.locator('header nav').getByRole('link', { name: 'Reflections' }).click();
+  await expect(page).toHaveURL(/\/reflections\/$/);
   await page.getByRole('heading', { name: 'Studying Habakkuk' }).getByRole('link').click();
   await expect(page.locator('h1')).toHaveText('Studying Habakkuk');
   await context.close();
@@ -64,7 +69,32 @@ test('no overflow at 320px or 200% desktop zoom-equivalent width', async ({ page
     }
   }
 });
-test('original WordPress article paths remain usable', async ({ page }) => {
-  await page.goto('/studying-habakkuk/');
-  await expect(page).toHaveURL(/\/blog\/studying-habakkuk\/$/);
+test('home shows exactly the latest five reflections in publication order', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('.recent-reflections .post-card')).toHaveCount(5);
+  await expect(page.locator('.recent-reflections h3')).toHaveText(articles.slice(0, 5).map((article) => article.title));
+  expect(await page.locator('.recent-reflections time').evaluateAll((nodes) => nodes.map((node) => node.dateTime)))
+    .toEqual(articles.slice(0, 5).map((article) => article.date));
+});
+test('book offers Canada first with direct US and Mexico marketplace links', async ({ page }) => {
+  await page.goto('/anchor-of-truth/');
+  const links = page.locator('.hero .marketplaces');
+  await expect(links.locator('a').first()).toHaveAttribute('href', 'https://www.amazon.ca/dp/B0CCCMRP1S');
+  await expect(links.getByRole('link', { name: /United States/ })).toHaveAttribute('href', 'https://www.amazon.com/dp/B0CCCMRP1S');
+  await expect(links.getByRole('link', { name: /Mexico/ })).toHaveAttribute('href', 'https://www.amazon.com.mx/dp/B0CCCMRP1S');
+});
+test('contact is a social directory, not a contact form', async ({ page }) => {
+  await page.goto('/contact/');
+  await expect(page.locator('form, input, textarea')).toHaveCount(0);
+  await expect(page.getByRole('link', { name: 'Bettina on LinkedIn' })).toHaveAttribute('href', 'https://ca.linkedin.com/in/bettina-gosselin-3146a133b');
+  await expect(page.getByRole('link', { name: 'Find Bettina on Facebook' })).toHaveAttribute('href', 'https://www.facebook.com/search/top?q=Bettina%20Gosselin');
+});
+test('original WordPress and initial site paths redirect to clean URLs', async ({ page }) => {
+  for (const [legacy, current] of [
+    ['/the-book.html', '/anchor-of-truth/'], ['/my-story.html', '/story/'], ['/blog/', '/reflections/'],
+    ...articles.flatMap(({ slug }) => [[`/${slug}/`, `/reflections/${slug}/`], [`/blog/${slug}/`, `/reflections/${slug}/`]]),
+  ]) {
+    await page.goto(legacy);
+    await expect(page).toHaveURL(`http://127.0.0.1:4322${current}`);
+  }
 });

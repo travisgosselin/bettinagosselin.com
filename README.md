@@ -82,7 +82,7 @@ Another paragraph, with *italic emphasis* if needed.
 3. **Keep the words:** preserve the author's wording, punctuation, paragraphs,
    quotations, and attribution. Markdown controls formatting, not rewriting.
 4. **Preview it:** run `npm run articles`, then `npm start`, and visit
-   `/blog/a-quiet-reminder/`. The blog and homepage update automatically.
+   `/reflections/a-quiet-reminder/`. The reflections index and homepage update automatically.
 5. **Check and commit:** run `npm test` after installing the browser once.
    Commit the Markdown, not `dist/`. Review the PR's screenshots before merging.
 
@@ -94,24 +94,44 @@ paragraph, never from an AI summary. Newest dates appear first.
 Use a blank line for a new paragraph. For a deliberate line break inside a
 paragraph, end the preceding line with **two spaces**. Preserve emphasis and
 quotation credits, including song lyrics. Raw HTML is escaped, not executed.
-Article images/embeds are intentionally unsupported until an asset review is
-added; normal HTTP(S) links, `mailto:` links, and same-page anchors are supported.
+Reviewed local JPEG photographs are supported:
 
-The two initial posts are **Studying Habakkuk** (November 17, 2025) and
-**Thanksgiving 2024** (October 20, 2024). Their text is checked against fixtures
-imported independently from the original WordPress feed. If intentionally editing
-one, review the source change before updating its corresponding fixture.
-Their old root URLs continue to redirect to the new article pages.
+```markdown
+![Describe what is in the photograph](/assets/images/articles/your-photo.jpg)
+```
+
+Store the file in `src/assets/images/articles/` and use a lowercase, hyphenated
+filename. The compiler checks that the file exists, validates its JPEG dimensions,
+adds intrinsic sizing/lazy loading, and applies the configured site base path.
+Remote images, SVGs, embeds, traversal paths, and images without alt text are
+rejected. Normal HTTP(S) links, `mailto:` links, and same-page anchors are supported.
+
+Seven posts have been migrated: **Studying Habakkuk**, **Thanksgiving 2024**,
+**A Beautiful Reminder**, **17 Years Ago**, **My Journey and the Power of Prayer**,
+**Reflections on Good Friday**, and **Hope Amidst Natural Disasters**.
+The homepage shows exactly the latest five, newest first; the reflections index
+lists all seven. Their text is checked against fixtures imported independently
+from the original WordPress feed. Dates use the original Toronto publication
+calendar, not the next day's UTC feed date. If intentionally editing one, review
+the source change before updating its corresponding fixture.
+
+Public URLs are extension-free: `/anchor-of-truth/`, `/story/`, `/reflections/`,
+`/contact/`, and `/reflections/<slug>/`. Old WordPress root article paths, `/blog/`
+article paths, `/the-book.html`, and `/my-story.html` redirect to these canonical
+URLs. Those compatibility files are not used in navigation or the sitemap.
+The slugs `anchor-of-truth`, `story`, `reflections`, `contact`, and `blog` are
+reserved so an article cannot overwrite a main page or redirect.
 
 ## Inside the repository
 
 ```text
 articles/                 Markdown posts with YAML frontmatter
 src/
-  index.html              Home: book, author, Scripture, latest reflection
-  the-book.html           Book details and Amazon link
-  my-story.html           Author introduction
-  blog/index.html         Automatically populated article listing
+  index.html              Home: book, author, Scripture, latest five reflections
+  anchor-of-truth/         index.html: book details and Amazon marketplaces
+  story/                  index.html: expanded author introduction
+  reflections/            index.html: automatically populated article listing
+  contact/                index.html: social links, no form
   templates/              Shared header, footer, article, and feature sections
   assets/css/site.css     Responsive ocean-inspired design
   assets/images/          Local portrait, cover, ocean image, favicon
@@ -130,6 +150,19 @@ is never evaluated as template code. Shared navigation lives in
 The main design is **Anchored in Light**: navy, ocean teal, sunrise gold, ivory
 reading surfaces, and literary typography. Mobile layouts stack naturally;
 keyboard navigation, reduced motion, and JavaScript-free use are supported.
+The book page uses a golden coastal sunset and a prominent, full book title,
+following the latest [book-page reference](design/references/book-page-direction.png).
+
+The Contact page links to Bettina's verified LinkedIn author profile. Its
+Facebook link is explicitly a **name search**, not a verified profile; replace
+it when the owner supplies the exact profile/page URL. No contact form, embed,
+tracker, or messaging service is used. Biography copy is an owner-review draft
+based on her published reflections, not new personal-history claims.
+
+Amazon Canada remains the primary purchase destination. US and Mexico links use
+the same published ASIN (`B0CCCMRP1S`) on `amazon.com` and `amazon.com.mx`.
+Amazon blocked automated product checks for those two marketplaces; their stock
+and shipping availability must be reviewed manually, not inferred from the links.
 
 ## Workflows
 
@@ -205,6 +238,8 @@ Its design is retained in [the implementation plan](design/implementation-plan.m
 - **Portrait:** owner-supplied photograph, resized locally; the original likeness is unchanged.
 - **Book:** published cover of [Anchor of Truth](https://www.amazon.ca/dp/B0CCCMRP1S).
 - **Ocean:** locally hosted [Unsplash source image](https://images.unsplash.com/photo-1471922694854-ff1b63b20054), under the [Unsplash license](https://unsplash.com/license).
+- **Book-page sunset:** [Philippe Bontemps on Unsplash](https://unsplash.com/photos/golden-sunset-over-a-rocky-beach-and-ocean-3PaKagdVXy0), under the same license.
+- **Article photographs:** migrated from the corresponding original WordPress posts and hosted locally. Their `source_url` fields identify the originals.
 - **Typography:** system fonts only; no external font, tracking, or image requests at runtime.
 - **Scripture:** Hebrews 6:19, ESV; attribution appears in the footer.
 

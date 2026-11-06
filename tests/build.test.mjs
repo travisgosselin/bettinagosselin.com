@@ -14,7 +14,8 @@ test('build and local server support a Pages repository subpath', async () => {
   try {
     server = await startServer({ port: 0 });
     const origin = `http://127.0.0.1:${server.address().port}`;
-    for (const route of ['', 'the-book.html', 'my-story.html', 'blog/', 'blog/studying-habakkuk/', 'blog/thanksgiving-2024/']) {
+    const articles = JSON.parse(await readFile('dist/articles.json', 'utf8'));
+    for (const route of ['', 'anchor-of-truth/', 'story/', 'reflections/', 'contact/', ...articles.map((article) => article.route)]) {
       const response = await fetch(`${origin}${env.BASE_PATH}${route}`);
       assert.equal(response.status, 200);
       const html = await response.text();
@@ -27,7 +28,10 @@ test('build and local server support a Pages repository subpath', async () => {
     assert.equal((await fetch(`${origin}/`)).status, 404);
     assert.equal((await fetch(`${origin}${env.BASE_PATH}../package.json`)).status, 404);
     const sitemap = await readFile('dist/sitemap.xml', 'utf8');
-    assert.match(sitemap, /https:\/\/travisgosselin.github.io\/bettinagosselin.com\/blog\/studying-habakkuk\//);
+    assert.match(sitemap, /https:\/\/travisgosselin.github.io\/bettinagosselin.com\/reflections\/studying-habakkuk\//);
+    assert.match(sitemap, /\/anchor-of-truth\//);
+    assert.match(sitemap, /\/contact\//);
+    assert.doesNotMatch(sitemap, /\.html|\/blog\//);
   } finally {
     if (server) await new Promise((resolve) => server.close(resolve));
     if (originalBase === undefined) delete process.env.BASE_PATH;

@@ -36,7 +36,7 @@ async function htmlFiles(directory) {
 
 export async function build({ articlesOnly = false } = {}) {
   const { origin, base } = siteConfig();
-  const articles = await loadArticles(path.join(root, 'articles'));
+  const articles = await loadArticles(path.join(root, 'articles'), undefined, base);
   const staging = path.join(root, '.build-staging');
   const output = path.join(root, 'dist');
   await rm(staging, { recursive: true, force: true });
@@ -44,30 +44,36 @@ export async function build({ articlesOnly = false } = {}) {
     await mkdir(staging, { recursive: true });
     await cp(path.join(root, 'src'), staging, { recursive: true, filter: (source) =>
       !source.includes(`${path.sep}templates`) && !source.endsWith('.gitkeep') });
-    const partials = Object.fromEntries(await Promise.all(['header', 'footer', 'scripture', 'book_cta'].map(async (name) =>
+    const partials = Object.fromEntries(await Promise.all(['header', 'footer', 'scripture', 'book_cta', 'marketplaces'].map(async (name) =>
       [name, await readFile(path.join(root, 'src/templates', `${name}.html`), 'utf8')])));
-    const card = (article, latest = false) => `<article class="post-card${latest ? ' post-card--featured' : ''}">
+    const card = (article, home = false, latest = false) => `<article class="post-card${latest ? ' post-card--featured' : ''}">
       <p class="eyebrow">${latest ? 'Latest reflection <span aria-hidden="true">/</span> ' : ''}<time datetime="${article.date}">${esc(displayDate(article.date))}</time></p>
-      <h${latest ? '3' : '2'}><a href="${base}blog/${article.slug}/">${esc(article.title)}</a></h${latest ? '3' : '2'}>
+      <h${home ? '3' : '2'}><a href="${base}reflections/${article.slug}/">${esc(article.title)}</a></h${home ? '3' : '2'}>
       <p>${esc(article.excerpt)}</p>
-      <a class="text-link" href="${base}blog/${article.slug}/">Read the reflection <span aria-hidden="true">↗</span><span class="sr-only">: ${esc(article.title)}</span></a>
+      <a class="text-link" href="${base}reflections/${article.slug}/">Read the reflection <span aria-hidden="true">↗</span><span class="sr-only">: ${esc(article.title)}</span></a>
     </article>`;
     const globals = { base, origin, year: String(new Date().getUTCFullYear()) };
     const shared = { ...globals,
       ...Object.fromEntries(Object.entries(partials).map(([name, html]) => [name, render(html, globals)])),
-      latest_post: articles[0] ? card(articles[0], true) : '<p>New reflections are on their way. Thank you for being here.</p>',
+      latest_posts: articles.slice(0, 5).map((article, index) => card(article, true, index === 0)).join('\n') || '<p>New reflections are on their way. Thank you for being here.</p>',
       article_list: articles.map((article) => card(article)).join('\n') || '<p>New reflections are on their way.</p>' };
     const expand = render;
     for (const file of await htmlFiles(staging)) {
       const relative = path.relative(staging, file).split(path.sep).join('/');
-      const pageUrl = relative === 'index.html' ? '' : relative.replace(/index\.html$/, '');
+      const pageUrl = ['index.html', '404.html'].includes(relative) ? '' : relative.replace(/index\.html$/, '');
       const values = { ...shared, canonical: `${origin}${base}${pageUrl}` };
       await writeFile(file, expand(await readFile(file, 'utf8'), values));
     }
     const template = await readFile(path.join(root, 'src/templates/article.html'), 'utf8');
     const manifest = [];
+    async function redirect(file, route, title) {
+      const destination = `${base}${route}`;
+      const location = path.join(staging, file);
+      await mkdir(path.dirname(location), { recursive: true });
+      await writeFile(location, `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta http-equiv="refresh" content="0;url=${destination}"><link rel="canonical" href="${esc(`${origin}${destination}`)}"><title>${esc(title)}</title></head><body><p>This page has moved: <a href="${destination}">${esc(title)}</a>.</p></body></html>`);
+    }
     for (const article of articles) {
-      const route = `blog/${article.slug}/`;
+      const route = `reflections/${article.slug}/`;
       const directory = path.join(staging, route);
       await mkdir(directory, { recursive: true });
       await writeFile(path.join(directory, 'index.html'), expand(template, {
@@ -75,13 +81,15 @@ export async function build({ articlesOnly = false } = {}) {
         description: esc(article.description), date: article.date, display_date: esc(displayDate(article.date)),
         body: article.html,
       }));
-      const legacy = path.join(staging, article.slug);
-      await mkdir(legacy, { recursive: true });
-      await writeFile(path.join(legacy, 'index.html'), `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta http-equiv="refresh" content="0;url=${base}${route}"><link rel="canonical" href="${esc(`${origin}${base}${route}`)}"><title>${esc(article.title)}</title></head><body><p>This reflection has moved: <a href="${base}${route}">${esc(article.title)}</a>.</p></body></html>`);
+      await redirect(`${article.slug}/index.html`, route, article.title);
+      await redirect(`blog/${article.slug}/index.html`, route, article.title);
       manifest.push({ slug: article.slug, title: article.title, date: article.date, route, plainText: article.plainText });
     }
     await writeFile(path.join(staging, 'articles.json'), `${JSON.stringify(manifest, null, 2)}\n`);
-    const routes = ['', 'the-book.html', 'my-story.html', 'blog/', ...articles.map((a) => `blog/${a.slug}/`)];
+    await redirect('the-book.html', 'anchor-of-truth/', 'Anchor of Truth');
+    await redirect('my-story.html', 'story/', 'My Story');
+    await redirect('blog/index.html', 'reflections/', 'Reflections');
+    const routes = ['', 'anchor-of-truth/', 'story/', 'reflections/', 'contact/', ...articles.map((a) => `reflections/${a.slug}/`)];
     await writeFile(path.join(staging, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${routes.map((route) => `<url><loc>${esc(`${origin}${base}${route}`)}</loc></url>`).join('')}</urlset>\n`);
     await writeFile(path.join(staging, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${origin}${base}sitemap.xml\n`);
     await writeFile(path.join(staging, '.nojekyll'), '');

@@ -17,11 +17,24 @@ the initial implementation and direct push to `main`, without a PR.
   a substitute face or redesign the cover. Generated renderings are visual
   references, not source photography or approved final copy.
 - Homepage order: ocean/book hero, author introduction, Scripture quote,
-  latest-post preview, footer. Remove the redundant book-summary band and its
+  previews of the latest five reflections, footer. Remove the redundant book-summary band and its
   unused space.
-- Navigation: The Book, My Story, Blog. The wordmark links home. Scripture stays
+- Navigation: The Book, My Story, Reflections, Contact. The wordmark links home. Scripture stays
   in page content, not a separate navigation destination.
-- Provide dedicated book, biography, blog index, and article pages.
+- Public routes: `/anchor-of-truth/`, `/story/`, `/reflections/`, `/contact/`,
+  and `/reflections/<slug>/`. Never expose `.html` in links or canonical URLs.
+  Keep earlier site paths as redirects. The book route is `anchor-of-truth`,
+  not `book`.
+- Follow `references/book-page-direction.png` for the book page's sunset/ocean
+  hero, large readable cover, full title, and richer author section.
+- Expand My Story using the author's published reflections, retaining owner
+  review for newly composed biography copy.
+- Contact is a social directory without a form. Use the verified LinkedIn
+  author profile. The Facebook link is a clearly labeled name search until
+  the owner supplies a confirmed profile; never invent one.
+- Canada is the primary Amazon marketplace, with secondary US and Mexico links
+  and decorative flags alongside explicit country labels. Stock/shipping and
+  the two international product pages need manual verification.
 - Support responsive mobile, tablet, and desktop layouts with accessible,
   keyboard-friendly controls. Readability takes priority over cinematic effects.
 
@@ -77,9 +90,10 @@ the initial implementation and direct push to `main`, without a PR.
 - A small Node LTS build script, a maintained Markdown parser, YAML frontmatter
   parser, and Playwright for screenshots/testing.   Pin resolved versions with a lockfile. The initial build uses markdown-it,
   yaml, and Playwright; the published site has no JavaScript.
-- Main sources: `src/index.html`, `src/the-book.html`, `src/my-story.html`,
-  `src/blog/index.html`, and `src/templates/article.html`.
-- Build emits articles at `<base>/blog/<slug>/index.html`; retain established
+- Main sources: `src/index.html`, `src/anchor-of-truth/index.html`,
+  `src/story/index.html`, `src/reflections/index.html`, `src/contact/index.html`,
+  and `src/templates/article.html`.
+- Build emits articles at `<base>/reflections/<slug>/index.html`; retain established
   WordPress paths through static compatibility pages where necessary.
 - Required frontmatter: `title`, quoted ISO `date`, explicit `slug`, `author`,
   `description`. The slug determines the URL and must match the Markdown filename.
@@ -87,6 +101,9 @@ the initial implementation and direct push to `main`, without a PR.
   required for migrations.
 - Date-only publication uses `America/Toronto`. Future dates are rejected for
   now: scheduled posts need a scheduled rebuild and are outside this first pass.
+- Seven original posts are migrated, with independent original-text fixtures.
+  Their original photographs are local, reviewed JPEG assets with alt text,
+  intrinsic dimensions, and base-path-aware URLs; no remote image requests.
 - For future issue automation, label `article:request` identifies form submissions.
   Only maintainers apply
   `article:ready`; that second label authorizes an agent run. Re-labeling must

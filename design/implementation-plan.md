@@ -1,6 +1,6 @@
 # Implementation plan
 
-**Current scope:** the owner authorized the initial site, two latest articles,
+**Current scope:** the owner authorized the initial site, seven migrated articles,
 compiler, local npm commands, styles, tests, workflows, and a direct push to
 `main` without an initial PR. Keep the repository private and Pages disabled.
 
@@ -25,9 +25,10 @@ Create these sources:
 ```text
 articles/<slug>.md
 src/index.html
-src/the-book.html
-src/my-story.html
-src/blog/index.html
+src/anchor-of-truth/index.html
+src/story/index.html
+src/reflections/index.html
+src/contact/index.html
 src/templates/article.html
 src/assets/css/site.css
 src/assets/images/
@@ -36,7 +37,7 @@ dist/                          # generated, ignored
 ```
 
 The build copies authored static files, renders articles through the article
-template, fills explicit listing/latest-post placeholders, and writes `dist/`.
+template, fills explicit listing/latest-five-post placeholders, and writes `dist/`.
 Keep common navigation consistent across the separate main HTML files; test it
 rather than introducing a frontend router. Never commit generated article HTML.
 
@@ -61,10 +62,12 @@ paths. Derive URLs from a single configured origin/base path.
 
 ## 2. Pages and approved assets
 
-Depends on step 1. Implement the responsive ocean design and all five page
+Depends on step 1. Implement the responsive ocean design and all six page
 types. Use the actual portrait and cover, optimized local images, system or
 approved self-hosted fonts, and no tracking. The homepage omits the redundant
-book section and includes the article preview after Hebrews 6:19.
+book section and includes the five latest article previews after Hebrews 6:19.
+Use clean directory URLs (`/anchor-of-truth/`, `/story/`, `/reflections/`,
+`/contact/`) without `.html` in public links. Contact contains social links only.
 
 Migrate Studying Habakkuk using owner-supplied exact text, preserving paragraphs,
 line breaks, italic lyrics, and attribution. Compare rendered visible article
@@ -104,7 +107,7 @@ Chromium screenshots on isolated hosted runners. Diff against the PR merge base:
 | --- | --- |
 | Only `articles/**` | Added/modified articles, blog index, homepage |
 | Article deletions | Blog index and homepage; report removed posts |
-| Any other path, including documentation | Home, book, story, blog index, representative article, plus changed articles |
+| Any other path, including documentation | Home, book, story, reflections index, contact, representative article, plus changed articles |
 
 Capture full-page PNGs at 1440px desktop and 390px mobile with fixed locale,
 timezone, browser version and device scale; await local fonts and images.

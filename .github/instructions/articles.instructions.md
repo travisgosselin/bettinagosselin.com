@@ -30,6 +30,11 @@ applyTo: "articles/**/*.md"
   never silently remove or rewrite quotations.
 - For an article request, limit the change to the requested article and any
   explicitly approved local image assets. Do not edit generated output.
+- Use `/reflections/<slug>/` for public article links; never use `.html` URLs.
+  The homepage shows the five newest posts. Main-route slugs are reserved.
+- Reviewed JPEGs go in `src/assets/images/articles/`. Reference them with
+  `![Meaningful description](/assets/images/articles/name.jpg)`; the build
+  handles dimensions and subpaths. Do not use remote images, HTML, or embeds.
 - Run the repository's actual build/content checks once implemented; compare
   rendered body text to the supplied original. Report unavailable checks honestly.
 - Issue-to-article automation is deferred. For future article-request PRs, create

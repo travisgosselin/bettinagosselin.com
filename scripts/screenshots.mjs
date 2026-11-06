@@ -5,13 +5,13 @@ import { startServer } from './serve.mjs';
 import { siteConfig } from './build.mjs';
 
 export function selectRoutes(changes, articles) {
-  const main = ['', 'the-book.html', 'my-story.html', 'blog/'];
+  const main = ['', 'anchor-of-truth/', 'story/', 'reflections/', 'contact/'];
   const articleOnly = changes.length > 0 && changes.every((file) => file.startsWith('articles/'));
   const changedSlugs = new Set(changes.filter((file) => /^articles\/[^/]+\.md$/.test(file))
     .map((file) => file.slice('articles/'.length, -3)));
   const changed = articles.filter((article) => changedSlugs.has(article.slug)).map((article) => article.route);
   return [...new Set(articleOnly
-    ? ['', 'blog/', ...changed]
+    ? ['', 'reflections/', ...changed]
     : [...main, ...(articles[0] ? [articles[0].route] : []), ...changed])];
 }
 

@@ -6,7 +6,7 @@ export function validateManifest(manifest, { repository, pr, headSha }) {
   for (const image of manifest.images) {
     if (!/^[a-z0-9-]+\.png$/.test(image.file) || names.has(image.file) ||
         !['desktop', 'mobile'].includes(image.viewport) ||
-        !/^(?:|the-book\.html|my-story\.html|blog\/|blog\/[a-z0-9]+(?:-[a-z0-9]+)*\/)$/.test(image.route)) {
+        !/^(?:|anchor-of-truth\/|story\/|contact\/|reflections\/|reflections\/[a-z0-9]+(?:-[a-z0-9]+)*\/)$/.test(image.route)) {
       throw new Error('Invalid preview image metadata');
     }
     names.add(image.file);
