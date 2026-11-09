@@ -19,7 +19,7 @@ the initial implementation and direct push to `main`, without a PR.
 - Homepage order: ocean/book hero, author introduction, Scripture quote,
   previews of the latest five reflections, footer. Remove the redundant book-summary band and its
   unused space.
-- Navigation: My Book, My Story, My Reflections, Contact. The wordmark links home. Scripture stays
+- Navigation: My Book, My Story, Reflections, Contact. The wordmark links home. Scripture stays
   in page content, not a separate navigation destination.
 - Public routes: `/anchor-of-truth/`, `/story/`, `/reflections/`, `/contact/`,
   and `/reflections/<slug>/`. Never expose `.html` in links or canonical URLs.

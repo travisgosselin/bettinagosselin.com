@@ -18,7 +18,7 @@ for (const route of pages) {
     await expect(page.locator('h1')).toHaveCount(1);
     await expect(page.locator('main')).toBeVisible();
     await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-    await expect(page.locator('header nav a')).toHaveText(['My Book', 'My Story', 'My Reflections', 'Contact']);
+    await expect(page.locator('header nav a')).toHaveText(['My Book', 'My Story', 'Reflections', 'Contact']);
     const links = await page.locator('a[href], link[rel="canonical"], meta[property="og:url"]').evaluateAll((nodes) =>
       nodes.map((node) => node.href || node.content));
     expect(links.every((url) => !new URL(url).pathname.endsWith('.html'))).toBe(true);
@@ -60,7 +60,7 @@ test('skip link and main navigation work without JavaScript', async ({ browser }
   await page.goto('http://127.0.0.1:4322');
   await page.keyboard.press('Tab');
   await expect(page.getByRole('link', { name: 'Skip to content' })).toBeFocused();
-  await page.locator('header nav').getByRole('link', { name: 'My Reflections' }).click();
+  await page.locator('header nav').getByRole('link', { name: 'Reflections' }).click();
   await expect(page).toHaveURL(/\/reflections\/$/);
   await page.getByRole('heading', { name: 'Studying Habakkuk' }).getByRole('link').click();
   await expect(page.locator('h1')).toHaveText('Studying Habakkuk');

@@ -3,6 +3,7 @@
     <img src="src/assets/images/book-cover.jpg" alt="Anchor of Truth by Bettina Gosselin" width="145">
   </a>
   <h1>Bettina Gosselin</h1>
+  <p><strong>Looking for Bettina's website? <a href="https://bettinagosselin.com">Visit bettinagosselin.com</a>.</strong></p>
   <p><strong>Faith for the journey. Hope for the heart.</strong></p>
   <p>A thoughtfully built author website for <em>Anchor of Truth:<br>From the Pit of Despair to Glorious Light.</em></p>
   <p><a href="#quick-start">Run locally</a> · <a href="#add-a-reflection">Add an article</a> · <a href="#workflows">Workflows</a> · <a href="design/decisions.md">Design decisions</a></p>
@@ -108,7 +109,7 @@ rejected. Normal HTTP(S) links, `mailto:` links, and same-page anchors are suppo
 
 **All 46 published WordPress articles are migrated**, from **Teen Mission Camp**
 (September 24, 2009) through **Studying Habakkuk** (November 17, 2025), including
-their 28 original images. The homepage shows the latest five; **My Reflections**
+their 28 original images. The homepage shows the latest five; **Reflections**
 lists the complete archive, newest first.
 
 The public WordPress API inventory in `tests/fixtures/wordpress-archive.json`
@@ -126,7 +127,7 @@ article paths, `/the-book.html`, and `/my-story.html` redirect to these canonica
 URLs. Those compatibility files are not used in navigation or the sitemap.
 The slugs `anchor-of-truth`, `story`, `reflections`, `contact`, and `blog` are
 reserved so an article cannot overwrite a main page or redirect.
-Navigation uses **My Book**, **My Story**, **My Reflections**, and **Contact**;
+Navigation uses **My Book**, **My Story**, **Reflections**, and **Contact**;
 display-label changes do not change these URLs.
 
 ## Inside the repository

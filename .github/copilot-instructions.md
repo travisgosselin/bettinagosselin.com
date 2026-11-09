@@ -11,7 +11,7 @@ sunrise gold, warm ivory reading surfaces, ocean photography, and literary serif
 headings. Keep a focused homepage with a book-first hero, author introduction,
 Scripture quote, and five latest-post previews
 after the quote. Omit the redundant homepage book-summary band with unused space.
-Navigation destinations are My Book, My Story, My Reflections, and Contact, at
+Navigation destinations are My Book, My Story, Reflections, and Contact, at
 `/anchor-of-truth/`, `/story/`, `/reflections/`, and `/contact/`. Article URLs are
 `/reflections/<slug>/`. All public links/canonicals must be extension-free;
 HTML index files are an implementation detail. Keep legacy URLs as redirects,
