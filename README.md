@@ -112,6 +112,9 @@ rejected. Normal HTTP(S) links, `mailto:` links, and same-page anchors are suppo
 (September 24, 2009) through **Studying Habakkuk** (November 17, 2025), including
 their 28 original images. The homepage shows the latest five; **Reflections**
 lists the complete archive, newest first.
+The archive groups posts by publication year, with a right-hand year index and
+article counts. Empty years are omitted. Links jump to the matching year without
+hiding other posts or requiring JavaScript; on mobile, the index sits above the list.
 
 The public WordPress API inventory in `tests/fixtures/wordpress-archive.json`
 records every original title, slug, publication date, source URL, and image.

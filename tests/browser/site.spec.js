@@ -41,7 +41,32 @@ for (const { slug } of archive.articles) {
 test('reflections index lists every published article in publication order', async ({ page }) => {
   await page.goto('/reflections/');
   await expect(page.locator('.blog-list .post-card')).toHaveCount(articles.length);
-  await expect(page.locator('.blog-list h2')).toHaveText(articles.map((article) => article.title));
+  await expect(page.locator('.blog-list .post-card h3')).toHaveText(articles.map((article) => article.title));
+});
+test('year navigation has accurate nonempty buckets and adapts to the viewport', async ({ page }) => {
+  await page.goto('/reflections/');
+  const years = [...new Set(articles.map((article) => article.date.slice(0, 4)))];
+  const navigation = page.getByRole('navigation', { name: 'Browse by year' });
+  await expect(navigation.getByRole('link')).toHaveCount(years.length);
+  await expect(page.locator('.archive-year-heading')).toHaveCount(years.length);
+  let total = 0;
+  for (const year of years) {
+    const posts = articles.filter((article) => article.date.startsWith(year));
+    total += posts.length;
+    const label = `${year}, ${posts.length} reflection${posts.length === 1 ? '' : 's'}`;
+    await expect(navigation.getByRole('link', { name: label, exact: true })).toHaveAttribute('href', `#year-${year}`);
+    const section = page.locator(`section[aria-labelledby="year-${year}"]`);
+    await expect(section.locator('.post-card h3')).toHaveText(posts.map((article) => article.title));
+  }
+  expect(total).toBe(articles.length);
+  for (const width of [320, 760, 761, 1024, 1440]) {
+    await page.setViewportSize({ width, height: 1000 });
+    const sidebar = await page.locator('.archive-sidebar').boundingBox();
+    const list = await page.locator('.blog-list').boundingBox();
+    if (width > 760) expect(sidebar.x).toBeGreaterThanOrEqual(list.x + list.width);
+    else expect(sidebar.y + sidebar.height).toBeLessThanOrEqual(list.y);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  }
 });
 test('local links and images resolve', async ({ page, request }) => {
   const urls = new Set();
@@ -54,14 +79,20 @@ test('local links and images resolve', async ({ page, request }) => {
   }
   for (const url of urls) expect((await request.get(url)).status(), url).toBe(200);
 });
-test('skip link and main navigation work without JavaScript', async ({ browser }) => {
-  const context = await browser.newContext({ javaScriptEnabled: false });
+test('skip link and main navigation work without JavaScript', async ({ browser }, testInfo) => {
+  const context = await browser.newContext({ javaScriptEnabled: false, viewport: testInfo.project.use.viewport, reducedMotion: 'reduce' });
   const page = await context.newPage();
   await page.goto('http://127.0.0.1:4322');
   await page.keyboard.press('Tab');
   await expect(page.getByRole('link', { name: 'Skip to content' })).toBeFocused();
   await page.locator('header nav').getByRole('link', { name: 'Reflections' }).click();
   await expect(page).toHaveURL(/\/reflections\/$/);
+  const oldestYear = articles.at(-1).date.slice(0, 4);
+  await page.getByRole('navigation', { name: 'Browse by year' })
+    .getByRole('link', { name: new RegExp(`^${oldestYear},`) }).focus();
+  await page.keyboard.press('Enter');
+  await expect(page).toHaveURL(new RegExp(`/reflections/#year-${oldestYear}$`));
+  await expect(page.locator(`#year-${oldestYear}`)).toBeFocused();
   await page.getByRole('heading', { name: 'Studying Habakkuk' }).getByRole('link').click();
   await expect(page.locator('h1')).toHaveText('Studying Habakkuk');
   await context.close();

@@ -53,6 +53,10 @@ proposed or blocked automation as implemented.
 - All 46 published WordPress posts are migrated, with their original dates,
   slugs, text, and images. The source inventory and independent original-text
   fixtures in `tests/fixtures/` guard against missing or altered archive content.
+- Group the reflections archive by publication year, newest first, with a
+  right-hand year index and accurate article counts. Skip empty years. Year links
+  jump to sections without filtering or JavaScript; show the index above the
+  list on mobile. Generate groups and counts from article dates, never hardcode them.
 - Do not add a newsletter, contact form, analytics, tracking, or external
   service integration without approval. Never imply a form works without a
   working, approved submission destination.

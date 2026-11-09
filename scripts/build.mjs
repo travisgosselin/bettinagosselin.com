@@ -46,17 +46,23 @@ export async function build({ articlesOnly = false } = {}) {
       !source.includes(`${path.sep}templates`) && !source.endsWith('.gitkeep') });
     const partials = Object.fromEntries(await Promise.all(['header', 'footer', 'scripture', 'book_cta', 'marketplaces'].map(async (name) =>
       [name, await readFile(path.join(root, 'src/templates', `${name}.html`), 'utf8')])));
-    const card = (article, home = false, latest = false) => `<article class="post-card${latest ? ' post-card--featured' : ''}">
+    const card = (article, latest = false) => `<article class="post-card${latest ? ' post-card--featured' : ''}">
       <p class="eyebrow">${latest ? 'Latest reflection <span aria-hidden="true">/</span> ' : ''}<time datetime="${article.date}">${esc(displayDate(article.date))}</time></p>
-      <h${home ? '3' : '2'}><a href="${base}reflections/${article.slug}/">${esc(article.title)}</a></h${home ? '3' : '2'}>
+      <h3><a href="${base}reflections/${article.slug}/">${esc(article.title)}</a></h3>
       <p>${esc(article.excerpt)}</p>
       <a class="text-link" href="${base}reflections/${article.slug}/">Read the reflection <span aria-hidden="true">↗</span><span class="sr-only">: ${esc(article.title)}</span></a>
     </article>`;
+    const years = [...Map.groupBy(articles, (article) => article.date.slice(0, 4))];
+    const countLabel = (count) => `${count} reflection${count === 1 ? '' : 's'}`;
     const globals = { base, origin, year: String(new Date().getUTCFullYear()) };
     const shared = { ...globals,
       ...Object.fromEntries(Object.entries(partials).map(([name, html]) => [name, render(html, globals)])),
-      latest_posts: articles.slice(0, 5).map((article, index) => card(article, true, index === 0)).join('\n') || '<p>New reflections are on their way. Thank you for being here.</p>',
-      article_list: articles.map((article) => card(article)).join('\n') || '<p>New reflections are on their way.</p>' };
+      latest_posts: articles.slice(0, 5).map((article, index) => card(article, index === 0)).join('\n') || '<p>New reflections are on their way. Thank you for being here.</p>',
+      article_years: years.map(([year, posts]) => `<li><a href="#year-${year}" aria-label="${year}, ${countLabel(posts.length)}"><span>${year}</span><span class="year-badge" aria-hidden="true">${posts.length}</span></a></li>`).join('\n'),
+      article_list: years.map(([year, posts]) => `<section class="reflection-year" aria-labelledby="year-${year}">
+        <h2 class="archive-year-heading" id="year-${year}" tabindex="-1">${year}<span>${countLabel(posts.length)}</span></h2>
+        ${posts.map((article) => card(article)).join('\n')}
+      </section>`).join('\n') || '<p>New reflections are on their way.</p>' };
     const expand = render;
     for (const file of await htmlFiles(staging)) {
       const relative = path.relative(staging, file).split(path.sep).join('/');

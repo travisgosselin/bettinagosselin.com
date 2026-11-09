@@ -25,6 +25,10 @@ the initial implementation and direct push to `main`, without a PR.
   and `/reflections/<slug>/`. Never expose `.html` in links or canonical URLs.
   Keep earlier site paths as redirects. The book route is `anchor-of-truth`,
   not `book`.
+- Reflections are grouped by publication year, newest first. A right-hand index
+  links to each year and shows its article count; omit empty years. Use native
+  anchor links, keeping the complete archive visible without JavaScript.
+  Move the year index above the list on mobile.
 - Follow `references/book-page-direction.png` for the book page's sunset/ocean
   hero, large readable cover, full title, and richer author section.
 - Expand My Story using the author's published reflections, retaining owner

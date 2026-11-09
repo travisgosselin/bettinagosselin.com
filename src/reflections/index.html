@@ -22,7 +22,14 @@
     <div class="container"><p class="eyebrow"><span class="tiny-rule" aria-hidden="true"></span>Reflections</p><h1>Faith for<br><em>everyday life.</em></h1><p>Reflections on Scripture, gratitude, and holding on to hope.</p></div>
   </section>
   <section class="section-pad blog-list-section" aria-label="All reflections">
-    <div class="container blog-list">{{article_list}}</div>
+    <div class="container archive-layout">
+      <aside class="archive-sidebar" aria-labelledby="archive-heading">
+        <p class="eyebrow">The archive</p>
+        <h2 id="archive-heading">Browse by year</h2>
+        <nav class="archive-years" aria-labelledby="archive-heading"><ul>{{article_years}}</ul></nav>
+      </aside>
+      <div class="blog-list">{{article_list}}</div>
+    </div>
   </section>
   {{book_cta}}
 </main>
