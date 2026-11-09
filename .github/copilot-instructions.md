@@ -77,13 +77,16 @@ proposed or blocked automation as implemented.
   images or embeds. Keep alt text out of article-prose fidelity comparisons.
 - Keep the site compatible with static hosting, including GitHub Pages at a
   custom domain or repository subpath. Use relative asset paths and no
-  server-dependent routing. Build the initial version privately with Pages
-  disabled. Prepare a future publishing workflow with build/check jobs and a
+  server-dependent routing. The repository is public and the owner has enabled
+  Pages at `https://travisgosselin.github.io/bettinagosselin.com/`.
+  Pushes to `main` must check, build, and deploy automatically. Keep the
   separate Pages job gated on `PAGES_ENABLED == 'true'`, public visibility, and
   `main`. Every Pages integration step must be inside the gate; builds cannot
   depend on Pages being enabled. Prefer gated valid YAML over commented-out steps.
-  The owner must make the repo public and explicitly enable publishing later.
-  Do not change DNS, visibility, or activate services during preparation.
+  Production repository variables are `SITE_ORIGIN=https://travisgosselin.github.io`,
+  `BASE_PATH=/bettinagosselin.com/`, and `PAGES_ENABLED=true`. Local defaults
+  remain unchanged. Do not configure a custom domain or change WordPress/DNS
+  without separate owner approval.
 - Include desktop/mobile screenshots in every PR using native GitHub image
   attachments and one updated bot comment. Article-only changes show affected
   articles, blog index and homepage; any other path shows all main pages and a

@@ -68,14 +68,14 @@ the initial implementation and direct push to `main`, without a PR.
 - All article sources are simple Markdown with YAML frontmatter in root
   `articles/`; build tooling compiles them into the delivered site.
 - Build output goes to ignored `dist/`, not back into `src/` or `articles/`.
-- Build the initial version privately. Pages is not enabled and must remain
-  disabled until the owner explicitly makes the repository public.
-- Prepare a publish workflow with working build/check jobs and a separate gated
+- Initial development was private. The owner has now made the repository public
+  and authorized Pages hosting at `https://travisgosselin.github.io/bettinagosselin.com/`.
+- Keep a publish workflow with working build/check jobs and a separate gated
   Pages job. Use `PAGES_ENABLED == 'true'`, a public-repository check, and a
   `main`-branch check. Gate every Pages integration step, including configuration
   and artifact upload. Prefer executable, gated YAML over commented-out steps.
-- Once public and explicitly enabled, pushes to `main`, including merges,
-  automatically deploy. Public visibility alone must not enable publishing.
+- Pushes to `main`, including merges, automatically deploy with the explicit
+  publishing gate enabled. Public visibility alone must not enable publishing.
 - PR screenshots and inline image comments are part of the initial implementation
   plan, alongside ordinary PR build/content checks. Capture affected articles,
   blog listing and homepage for article-only changes; any other changed file
@@ -115,9 +115,11 @@ the initial implementation and direct push to `main`, without a PR.
 
 ## Activation gates
 
-- Keep the repository private and Pages disabled now. Later, the owner must
-  explicitly authorize public visibility, enable Pages, and opt into the
-  publish gate. Do not change visibility, Pages settings, or DNS during preparation.
+- The temporary Pages deployment is owner-approved. Repository variables use
+  `SITE_ORIGIN=https://travisgosselin.github.io`, `BASE_PATH=/bettinagosselin.com/`,
+  and `PAGES_ENABLED=true`; the `github-pages` environment allows `main` only.
+  Keep the existing WordPress site and DNS untouched. Custom-domain activation
+  requires separate owner approval.
 - Inline PR images will use GitHub's native attachments through
   `gh pr comment --attach`; no separate public image host is required. Current
   GitHub documentation supports CLI uploads and repository-scoped access for

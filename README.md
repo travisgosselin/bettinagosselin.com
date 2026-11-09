@@ -15,10 +15,11 @@ An ocean-inspired, responsive home for Bettina's book, her story, and reflection
 on Scripture and everyday life. Built with plain HTML and CSS, a small Markdown
 compiler, and **no browser JavaScript, database, or runtime service**.
 
-**Private development:** GitHub Pages remains disabled. This source is ready for
-local review; pushing to `main` checks and packages the site, but does not publish
-it. WordPress and DNS are unchanged. Biography/marketing copy still needs final
-owner review before launch.
+**Public preview:** the replacement site is hosted at
+**https://travisgosselin.github.io/bettinagosselin.com/**. Pushes to `main`
+automatically check, build, and deploy it through GitHub Actions. The existing
+site at **https://bettinagosselin.com** and its DNS remain unchanged.
+Biography/marketing copy still needs final owner review before the domain cutover.
 
 ## Quick start
 
@@ -176,7 +177,7 @@ and shipping availability must be reviewed manually, not inferred from the links
 
 | Workflow | Trigger | Behavior |
 | --- | --- | --- |
-| **Build and publish** | Push to `main`, or manual dispatch | Checks content, tests responsive pages, packages `dist/`; Pages job is gated off by default |
+| **Build and publish** | Push to `main`, or manual dispatch | Checks content, tests responsive pages, packages `dist/`, and deploys to the enabled GitHub Pages preview |
 | **PR checks and screenshots** | Every PR creation/update | Checks/builds/tests, then captures desktop/mobile page images |
 | **Attach PR screenshots** | Successful preview workflow | Validates image artifacts and posts native GitHub image attachments in one replacement bot comment |
 
@@ -200,32 +201,34 @@ an error; artifacts are not passed off as inline images. Approve any alternative
 credential setup separately. Fork PRs and Copilot PRs may require normal
 maintainer approval before Actions runs.
 
-### Enable Pages later
+### GitHub Pages deployment
 
-Do not enable it during private development. When ready:
+Pages uses **GitHub Actions** as its publishing source. The `github-pages`
+environment permits deployments from `main`, and these repository variables
+configure the temporary site:
 
-1. Review public copy, photo/cover rights, and third-party quotation permissions.
-   This includes the preserved lyric quotation in Studying Habakkuk.
-2. Explicitly make the repository public.
-3. In repository **Settings → Pages**, select **GitHub Actions** as the source.
-4. Configure the `github-pages` environment to permit deployments from `main`.
-5. Set Actions repository variables for the final origin and base path:
+| Variable | Current GitHub Pages preview | Custom domain, after approval |
+| --- | --- | --- |
+| `SITE_ORIGIN` | `https://travisgosselin.github.io` | `https://bettinagosselin.com` |
+| `BASE_PATH` | `/bettinagosselin.com/` | `/` |
+| `PAGES_ENABLED` | `true` | `true` |
 
-   | Variable | GitHub-hosted project site | Custom domain, after approval |
-   | --- | --- | --- |
-   | `SITE_ORIGIN` | `https://travisgosselin.github.io` | `https://bettinagosselin.com` |
-   | `BASE_PATH` | `/bettinagosselin.com/` | `/` |
-   | `PAGES_ENABLED` | `true` | `true` |
-
-6. Run **Build and publish**, or push to `main`. Verify the deployment URL and
-   navigation before any separate domain/DNS cutover.
+Every push or merge to `main` runs **Build and publish**. Deployment happens only
+after the content and browser checks succeed. The same workflow can be run
+manually from the Actions tab. PRs do not deploy the site.
 
 The Pages job requires **all three**: `PAGES_ENABLED == 'true'`, public repository
-visibility, and the `main` ref. With the variable unset, it skips all Pages
-configuration, artifact upload, and deployment. The repository becoming public
-alone does not publish anything. No CNAME is included.
+visibility, and the `main` ref. Setting the variable to `false` skips future
+publishing while retaining build/check jobs; it does not remove a site already
+published. No custom domain or CNAME is configured.
 
-You can test a subpath build locally without enabling Pages:
+**Custom domain later:** review final copy, asset rights, and third-party
+quotation permissions before the domain cutover. Verify ownership and configure
+the Pages custom domain before updating website DNS records, change the variables
+to the custom-domain values above, and deploy again. Keep email DNS records
+untouched. This is a separate owner-approved cutover, not part of preview hosting.
+
+You can test the current subpath build locally without publishing:
 
 ```bash
 SITE_ORIGIN=https://travisgosselin.github.io BASE_PATH=/bettinagosselin.com/ npm run build

@@ -2,7 +2,8 @@
 
 **Current scope:** the owner authorized the initial site, all 46 published WordPress articles,
 compiler, local npm commands, styles, tests, workflows, and a direct push to
-`main` without an initial PR. Keep the repository private and Pages disabled.
+`main` without an initial PR. The owner has since made the repository public and
+authorized deployment to the temporary GitHub Pages URL.
 
 **Implemented:** steps 1–2, local screenshot capture, PR screenshot and native
 attachment workflow code (steps 3–4), and the gated publishing workflow (step 5).
@@ -10,8 +11,8 @@ Local unit, content-fidelity, subpath, and responsive browser checks pass.
 The first real PR must still verify GitHub-hosted screenshot rendering and
 workflow-token attachment uploads. Do not equate local captures with that proof.
 
-**Deferred:** step 6, credential acquisition, public visibility, Pages activation,
-DNS cutover, and publication. See the root README for actual commands and status.
+**Deferred:** step 6, credential acquisition, custom-domain activation, and DNS
+cutover. See the root README for actual commands and status.
 
 ## 1. Build and content contract
 
@@ -153,7 +154,12 @@ retention/cleanup behavior before promising automatic deletion.
 fork, stale run, and malformed artifact tests. Confirm actual inline image
 display in a test PR before marking preview automation complete.
 
-## 5. Prepare publishing, disabled during private development
+## 5. GitHub Pages publishing
+
+The initial private-development gate is retained, but publishing is now enabled
+for `https://travisgosselin.github.io/bettinagosselin.com/`. Pages uses GitHub
+Actions; the `github-pages` environment permits only `main`. Repository variables
+set the GitHub origin, repository base path, and `PAGES_ENABLED=true`.
 
 Depends on steps 1–2. Add `.github/workflows/deploy.yml` on pushes to `main`
 and manual dispatch. No path filters. Build and check from the exact selected
@@ -175,12 +181,10 @@ Keep build permissions read-only. Deploy alone receives `pages: write` and
 and publishes the returned deployment URL. Serialize deployments so an older
 run cannot replace newer output. Pin official actions to reviewed commit SHAs.
 
-Keep Pages disabled while the repository is private. Later, after the owner
-explicitly makes it public, configure the Pages Actions source and `github-pages`
-environment, verify origin/base path, then set `PAGES_ENABLED=true`. Visibility
-change alone must not trigger publication. Do not add a CNAME or change DNS
-until approved. Initially use the GitHub Pages
-address. Verify live pages, CSS, images, articles and base-path navigation.
+Keep the public-repository and explicit-enable gates. Visibility change alone
+must not trigger publication. Do not add a custom domain or change DNS until
+approved. Use the temporary GitHub Pages address and verify live pages, CSS,
+images, articles, and base-path navigation.
 Rollback is a normal revert commit to `main`, followed by redeployment.
 
 **Initial acceptance:** build/check succeeds while Pages does not exist; deployment
@@ -242,8 +246,9 @@ it to production during automation development.
 
 Initial readiness requires text fidelity, responsive pages, normal PR checks,
 desktop/mobile screenshots embedded in PR comments through native attachments,
-and a proven disabled publish gate. Issue-to-draft-PR and live Pages deployment
-remain excluded until separately activated. Preserve their notes here without
+and a proven publish gate. Pages is now enabled for the temporary URL;
+issue-to-draft-PR and custom-domain cutover remain excluded until separately
+activated. Preserve their notes here without
 implementing them prematurely.
 Add verified setup/development commands and credential permission instructions
 to the root README as the corresponding features become real. Keep decisions
